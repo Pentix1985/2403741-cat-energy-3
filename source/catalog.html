@@ -12,11 +12,9 @@
 <body class="page__body">
   <!-- Header -->
   <header class="header">
-    <a class="header__logo-image-link logo-image-link" href="index.html">
-      <img class="header__logo-image" src="#" alt="Изображение логотипа магазина Cat Energy" width="33" height="38">
-    </a>
-    <a class="header__logo-text-link logo-text-link" href="index.html">
-      <img class="header__logo-text" src="#" alt="Название магазина Cat Energy" width="101" height="18">
+    <a class="header__logo logo" href="index.html">
+      <img class="logo__trademark" src="#" alt="Изображение товарного знака магазина Cat Energy" width="33" height="38">
+      <img class="logo__text" src="#" alt="Логотип магазина Cat Energy" width="101" height="18">
     </a>
     <nav class="header__navigation navigation navigation--enabled">
       <button class="navigation__toggle toggle" type="button">
@@ -36,7 +34,7 @@
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="program_selection.html">
+          <a class="navigation__link" href="#">
             Подбор программы
           </a>
         </li>
@@ -55,9 +53,9 @@
       <h2 class="visually-hidden">
         Список кормлв для кошек
       </h2>
-      <ul class="catalog__products-cards-list">
+      <ul class="catalog__products-cards-list products-cards-list">
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy PRO 500г со вкусом курицы" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -98,7 +96,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy PRO 1000г со вкусом курицы" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -139,7 +137,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy PRO 500г со вкусом рыбы" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -180,7 +178,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy PRO 1000г со вкусом рыбы" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -221,7 +219,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy SLIM 500 г со вкусом гречки" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -262,7 +260,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy SLIM 1000 г со вкусом гречки" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -303,7 +301,7 @@
           </a>
         </li>
         <li class="catalog__product-card product-card">
-          <a class="product-card__image-link" href="#">
+          <a class="product-card__image-link" href="#" tabindex="-1">
             <img class="product-card__image" src="#" alt="Упаковка товара Cat Energy SLIM 500 г со вкусом риса" width="140" height="107">
           </a>
           <div class="product-card__info">
@@ -435,7 +433,9 @@
         </li>
       </ul>
       <div class="additional-products__gift">
-        <p class="additional-products__gift-text"></p>
+        <p class="additional-products__gift-text">
+          Закажите все и получите чехол для кота в подарок!
+        </p>
       </div>
     </section>
     <section class="subscription">
@@ -449,7 +449,7 @@
         <label class="visually-hidden" for="form-user-mail">
           Почта пользователя
         </label>
-        <input class="subscribe-form__mail" type="email" id="form-user-mail" name="email" required placeholder="кuklachev@gmail.com">
+        <input class="subscribe-form__mail" type="email" id="form-user-mail" name="email" required placeholder="kuklachev@gmail.com">
         <button class="subscribe-form__button button button--primary" type="submit">
           Подписаться
         </button>
@@ -466,39 +466,40 @@
       </div>
     </section>
   </main>
+
   <!-- Footer -->
   <footer class="footer">
-    <a class="footer__logo-text-link logo-text-link logo-text-link--footer" href="#">
-      <img class="footer__logo-text" src="#" alt="Название магазина Cat Energy" width="128" height="24">
+    <a class="footer__logo logo" href="index.html">
+      <img class="logo__text logo--footer" src="#" alt="Логотип магазина Cat Energy" width="101" height="18">
     </a>
     <ul class="footer__social-list social-list">
       <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noreferrer noopener">
+        <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
           <span class="visually-hidden">
-            Социальная сеть Вконтакте
+            HTML Academy в социальной сети Вконтакте
           </span>
         </a>
       </li>
       <li class="social-list__item">
-        <a class="social-list__link social-list__link--youtube" href="#" target="_blank" rel="noreferrer noopener">
+        <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
           <span class="visually-hidden">
-            Видеохостинг YouTube
+            HTML Academy на видеохостинге YouTube
           </span>
         </a>
       </li>
       <li class="social-list__item">
-        <a class="social-list__link social-list__link--telegramm" href="#" target="_blank" rel="noreferrer noopener">
+        <a class="social-list__link social-list__link--telegramm" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
           <span class="visually-hidden">
-            Мессенджер Telegram
+            HTML Academy в мессенджере Telegram
           </span>
         </a>
       </li>
     </ul>
-    <a class="drug-dealer" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
-      <span class="drug-dealer__name">
+    <a class="educational_provider" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+      <span class="educational_provider__name">
         HTML Academy
       </span>
-      <img class="drug-dealer__logo" src="#" alt="логотип htmlacademy" width="27" height="34">
+      <img class="educational_provider__logo" src="#" alt="Логотип htmlacademy" width="27" height="34">
     </a>
   </footer>
 </body>
