@@ -54,7 +54,11 @@
       <a class="hero__button button button--primary" href="#">
         Подобрать программу
       </a>
-      <img class="hero__image" src="#" alt="Банка с кормом Cat Energy pro со вкусом курицы" width="280" height="270">
+      <picture>
+        <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/desktop/hero/hero_index_desktop@2x.png 1x, images/desktop/hero/hero_index_desktop@2x.png 2x">
+        <source type="image/png" width="709" height="609" media="(min-width: 768px)" srcset="images/tablet/hero/hero_index_tablet@1x.jpg 1x, images/tablet/hero/hero_index_tablet@2x.jpg 2x">
+        <img class="hero__image" src="images/mobile/hero/hero_index_mobile@1x.png" srcset="images/mobile/hero/hero_index_mobile@2x.png 2x" alt="Банка с кормом Cat Energy pro со вкусом курицы" width="280" height="270">
+      </picture>
     </section>
     <section class="programs">
       <h2 class="visually-hidden">
@@ -145,8 +149,17 @@
         </span>
       </p>
       <div class="example__compare-slider compare-slider">
-        <img class="compare-slider__image compare-slider__image--before" src="#" alt="Изображение до" width="280" height="256">
-        <img class="compare-slider__image compare-slider__image--after" src="#" alt="Изображение после" width="280" height="256">
+
+        <picture>
+          <source type="image/png" width="560" height="512" media="(min-width: 768px)" srcset="images/slider/fat_cat_tablet@1x.png 1x, images\slider\fat_cat_tablet@2x.png 2x">
+          <img class="compare-slider__image compare-slider__image--before" src="images/slider/fat_cat_mobile@1x.png" srcset="images/slider/fat_cat_mobile@2x.png 2x" alt="Изображение до" width="280" height="256">
+        </picture>
+
+        <picture>
+          <source type="image/png" width="560" height="512" media="(min-width: 769px)" srcset="images\slider\slim_cat_tablet@1x.png 1x, images\slider\slim_cat_tablet@2x.png 2x">
+          <img class="compare-slider__image compare-slider__image--after" src="images/slider/slim_cat_mobile@1x.png" srcset="images/slider/slim_cat_mobile@2x.png 2x" alt="Изображение после" width="280" height="256">
+        </picture>
+
         <label class="visually-hidden" for="compare-range">
           Сравнение изображений до и после
         </label>
@@ -161,6 +174,11 @@
         ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
       </address>
       <div class="contacts__map map">
+        <picture>
+          <source type="image/png" width="1440" height="400" media="(min-width: 1440px)" srcset="images\desktop\map\map_desktop@1x.jpg 1x, source\images\desktop\map\map_desktop@2x.jpg 2x">
+          <source type="image/png" width="768" height="400" media="(min-width: 768px)" srcset="images\tablet\map\map_tablet@1x.jpg 1x, images\tablet\map\map_tablet@2x.jpg 2x">
+          <img src="images/mobile/map/map_mobile@1x.jpg" alt="Расположение магазина Cat energy на карте" srcset="images/mobile/map/map_mobile@2x.jpg 2x" width="320" height="362">
+        </picture>
       </div>
     </section>
   </main>
