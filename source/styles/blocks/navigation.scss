@@ -1,0 +1,4 @@
+.navigation {
+  @include font-height-color-size(20, $text-color-basic, 20);
+  font-family: $secondary-font;
+}

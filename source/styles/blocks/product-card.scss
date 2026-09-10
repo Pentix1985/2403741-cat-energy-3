@@ -1,0 +1,7 @@
+.product-card__detail-title {
+  @include font-height-color-size(16, null, 12);
+}
+
+.product-card__detail-value {
+  @include font-height-color-size(16, null, 12);
+}

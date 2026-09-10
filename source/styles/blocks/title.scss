@@ -1,0 +1,4 @@
+.title {
+  @include font-height-color-size(37, $text-color-deafault, 24);
+  font-family: $secondary-font;
+}

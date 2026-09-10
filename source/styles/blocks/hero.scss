@@ -1,0 +1,24 @@
+@use "sass:color";
+
+.hero__text {
+  @include font-height-color-size(14, $text-color-basic, 14);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}
+
+.hero--page-index {
+  background-color: rgba(104, 183, 56, 1);
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(104, 183, 56, 1) 20%,
+      rgba(104, 183, 56, 0.85) 28%,
+      rgba(104, 183, 56, 0.85) 50%,
+      rgba(104, 183, 56, 0.85) 72%,
+      rgba(104, 183, 56, 1) 80%
+    ),
+    url("../../images/mobile/background/hero_index_background_mobile@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 640px 100%, contain;
+}

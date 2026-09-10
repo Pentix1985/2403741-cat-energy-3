@@ -1,0 +1,14 @@
+.program {
+  background-color: $bg-secondary-color;
+}
+
+.program__title {
+  text-transform: uppercase;
+}
+
+.program__link {
+  @include font-height-color-size(16, $text-color, 16);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  text-decoration: none;
+}

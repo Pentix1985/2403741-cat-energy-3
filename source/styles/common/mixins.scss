@@ -1,0 +1,15 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+@mixin font-height-color-size($line-height: 18, $color: $text-color-deafault, $font-size: 14) {
+  line-height: $line-height * 1px;
+  font-size: $font-size * 1px;
+  color: $color;
+}
