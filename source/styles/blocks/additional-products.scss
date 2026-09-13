@@ -1,0 +1,11 @@
+.additional-products__title {
+  @include font-height-color-size(24, null, 24);
+}
+
+.additional-products__gift {
+  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85)), url("../../images/mobile/background/catalog_background_mobile@2x.jpg");
+}
+
+.additional-products__gift-text {
+  @include font-height-color-size(20, $text-color-basic, 16);
+}

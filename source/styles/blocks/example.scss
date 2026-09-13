@@ -1,0 +1,28 @@
+.example {
+  background-color: $bg-secondary-color;
+}
+
+.example__title {
+  @include font-height-color-size(40, null, 36);
+}
+
+.example__result-value {
+  @include font-height-color-size(24, $text-color-deafault, 24);
+  font-family: $secondary-font;
+}
+
+.example__result-description {
+  @include font-height-color-size(12, $text-color, 12);
+}
+
+.example__total {
+  @include font-height-color-size(20, $text-color-deafault, 14);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}
+
+.example__total-price {
+  @include font-height-color-size(20, $text-color-deafault, 14);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}

@@ -1,0 +1,18 @@
+.contacts {
+  background-color: $bg-secondary-color;
+}
+
+.contacts__title {
+  @include font-height-color-size(20, $text-color-subscribe, 16);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  @include font-height-color-size(20);
+  font-style: normal;
+}
+
+.contacts--first-page {
+  background-color: $color-basic;
+}

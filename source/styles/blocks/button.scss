@@ -1,0 +1,13 @@
+.button {
+  @include font-height-color-size(20, $text-color-basic, 16);
+  font-family: $secondary-font;
+  text-decoration: none;
+  color: $text-color-basic;
+  text-transform: uppercase;
+  background-color: $bg-primary-color;
+}
+
+.button--secondary {
+  color: $text-color;
+  background-color: $bg-secondary-color;
+}

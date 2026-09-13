@@ -1,0 +1,4 @@
+.advantages__title {
+  @include font-height-color-size(40, null, 36);
+  font-family: $secondary-font;
+}

@@ -1,0 +1,15 @@
+.subscription__title {
+  @include font-height-color-size(24, null, 24);
+}
+
+.subscription__text {
+  @include font-height-color-size(24, $text-color-deafault, 16);
+}
+
+.subscribe-form__mail {
+  @include font-height-color-size(20, $text-color, 20);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  padding: 0;
+  height: 56px;
+}
