@@ -1,4 +1,11 @@
-.navigation {
+.navigation__list {
+  list-style-type: none;
+}
+
+.navigation__link {
   @include font-height-color-size(20, $text-color-basic, 20);
   font-family: $secondary-font;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-color-deafault;
 }

@@ -1,3 +1,7 @@
+.product-card__title-link {
+  text-decoration: none;
+}
+
 .product-card__detail-title {
   @include font-height-color-size(16, null, 12);
 }

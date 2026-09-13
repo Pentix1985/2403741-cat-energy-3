@@ -1,4 +1,6 @@
-@use "sass:color";
+$hero-bg-image-height: 302px;
+$hero-bg-image-width: 320px;
+$color-transition-width: calc($hero-bg-image-width / 2 + 5px);
 
 .hero__text {
   @include font-height-color-size(14, $text-color-basic, 14);
@@ -7,18 +9,20 @@
 }
 
 .hero--page-index {
-  background-color: rgba(104, 183, 56, 1);
   background-image:
     linear-gradient(
       to right,
-      rgba(104, 183, 56, 1) 20%,
-      rgba(104, 183, 56, 0.85) 28%,
-      rgba(104, 183, 56, 0.85) 50%,
-      rgba(104, 183, 56, 0.85) 72%,
-      rgba(104, 183, 56, 1) 80%
+      $bg-primary-color calc(50% - $color-transition-width),
+      $image-overlay 50%,
+      $bg-primary-color calc(50% + $color-transition-width)
     ),
-    url("../../images/mobile/background/hero_index_background_mobile@2x.jpg");
+    url("../../images/mobile/background/hero_index_background_mobile@2x.jpg"),
+    linear-gradient(
+      to right,
+      $bg-basic-color
+    );
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 640px 100%, contain;
+  background-position: center top, center top, bottom;
+  // Первый фон, должен быть не меньше изображения. В третьем фоне 138 это отступ от предыдущего фона
+  background-size: 100% max(calc(100% - 138px), $hero-bg-image-height), $hero-bg-image-width auto, 100% 138px;
 }

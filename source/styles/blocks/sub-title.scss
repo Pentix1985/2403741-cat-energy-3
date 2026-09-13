@@ -1,5 +1,6 @@
 .sub-title {
   @include font-height-color-size(20, $text-color-subtitle, 16);
+  font-weight: 400;
   font-family: $secondary-font;
   text-transform: uppercase;
 }

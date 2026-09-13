@@ -1,6 +1,8 @@
 .heading {
   @include font-height-color-size(36, $text-color-deafault, 36);
   font-family: $secondary-font;
+  font-weight: 400;
+  margin: 0;
 }
 
 .heading--page-index {

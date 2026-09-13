@@ -7,7 +7,7 @@
 }
 
 .example__result-value {
-  @include font-height-color-size(24, null, 24);
+  @include font-height-color-size(24, $text-color-deafault, 24);
   font-family: $secondary-font;
 }
 
@@ -18,9 +18,11 @@
 .example__total {
   @include font-height-color-size(20, $text-color-deafault, 14);
   font-family: $secondary-font;
+  text-transform: uppercase;
 }
 
 .example__total-price {
   @include font-height-color-size(20, $text-color-deafault, 14);
   font-family: $secondary-font;
+  text-transform: uppercase;
 }
