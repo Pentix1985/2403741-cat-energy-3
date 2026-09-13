@@ -9,6 +9,7 @@ $color-transition-width: calc($hero-bg-image-width / 2 + 5px);
 }
 
 .hero--page-index {
+  background-color: $bg-primary-color;
   background-image:
     linear-gradient(
       to right,
