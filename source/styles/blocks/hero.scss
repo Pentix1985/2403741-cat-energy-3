@@ -9,21 +9,26 @@ $color-transition-width: calc($hero-bg-image-width / 2 + 5px);
 }
 
 .hero--page-index {
-  background-color: $bg-primary-color;
   background-image:
     linear-gradient(
       to right,
-      $bg-primary-color calc(50% - $color-transition-width),
-      $image-overlay 50%,
-      $bg-primary-color calc(50% + $color-transition-width)
+      $bg-primary-color
     ),
     url("../../images/mobile/background/hero_index_background_mobile@2x.jpg"),
+    linear-gradient(
+      to right,
+      rgb(81, 81, 81, 1) 50%,
+      rgb(65, 65, 65, 1) 50%
+    ),
     linear-gradient(
       to right,
       $bg-basic-color
     );
   background-repeat: no-repeat;
-  background-position: center top, center top, bottom;
-  // Первый фон, должен быть не меньше изображения. В третьем фоне 138 это отступ от предыдущего фона
-  background-size: 100% max(calc(100% - 138px), $hero-bg-image-height), $hero-bg-image-width auto, 100% 138px;
+  background-position: center top, center top, center top, bottom;
+  background-size:
+    100% max(calc(100% - 138px), $hero-bg-image-height),
+    $hero-bg-image-width auto,
+    100% max(calc(100% - 138px), $hero-bg-image-height),
+    100% 138px;
 }

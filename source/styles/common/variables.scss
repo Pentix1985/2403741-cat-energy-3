@@ -3,14 +3,9 @@
 
 $color-primary: #68b738;
 $color-basic: #ffffff;
+$color-social: #666666;
 
-$image-overlay: color.adjust($color-primary, $alpha: -0.15);
-
-// Тут вычисляется фон вокруг картинки с помощью SCSS
-// $bg-primary-color: color.mix($color-primary, #ffffff, 0.85 * 100%);
-
-// Тут вычисляется фон вокруг картинки с помощью CSS
-$bg-primary-color: color-mix(in sRGB, $color-primary 85%, #ffffff);
+$bg-primary-color: rgba(104, 183, 56, 0.85);
 $bg-secondary-color: #f2f2f2;
 $bg-basic-color: #ffffff;
 

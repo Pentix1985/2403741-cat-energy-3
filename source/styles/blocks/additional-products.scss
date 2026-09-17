@@ -8,4 +8,12 @@
 
 .additional-products__gift-text {
   @include font-height-color-size(20, $text-color-basic, 16);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../icons/stack.svg#icon_gift");
+  }
 }

@@ -1,3 +1,16 @@
 .educational-provider__name {
   @include font-height-color-size(20, null, 16);
 }
+
+.educational-provider__logo {
+  fill: $color-social;
+
+  &:hover {
+    fill: $color-primary;
+  }
+
+  &:active {
+    fill: $color-primary;
+    opacity: 30%;
+  }
+}

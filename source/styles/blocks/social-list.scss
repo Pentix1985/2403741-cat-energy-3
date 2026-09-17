@@ -1,2 +1,43 @@
-// .social-list {
-// }
+.social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list__link {
+  display: inline-block;
+  width: 28px;
+  height: 22px;
+  color: $color-social;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 22px;
+    background-color: currentColor;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-primary;
+    opacity: 30%;
+  }
+}
+
+.social-list__link--vk::before {
+  mask-image: url("../../icons/stack.svg#vkontakte");
+}
+
+.social-list__link--youtube::before {
+  mask-image: url("../../icons/stack.svg#youtube");
+}
+
+.social-list__link--telegramm::before {
+  mask-image: url("../../icons/stack.svg#telegram");
+}
