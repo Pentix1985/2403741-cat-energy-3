@@ -2,3 +2,42 @@
   @include font-height-color-size(40, null, 36);
   font-family: $secondary-font;
 }
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item::before {
+  content: "";
+  display: inline-block;
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.advantages__item--leaf::before {
+  background-image: url("../../icons/stack.svg#icon_leaf");
+  background-size: 30px 32px;
+  background-position: center center;
+}
+
+.advantages__item--container::before {
+  background-image: url("../../icons/stack.svg#container");
+  background-size: 26px 29px;
+  background-position: center center;
+}
+
+.advantages__item--cutlery::before {
+  background-image: url("../../icons/stack.svg#icon_eat");
+  background-size: 25px 30px;
+  background-position: center center;
+}
+
+.advantages__item--alarm::before {
+  background-image: url("../../icons/stack.svg#alarm");
+  background-size: 27px 31px;
+  background-position: center center;
+}
