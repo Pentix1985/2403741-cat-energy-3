@@ -1,2 +1,59 @@
-// .toggle {
-// }
+.toggle {
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: $break-point-tablet) {
+    display: none;
+  }
+}
+
+.toggle__checkbox {
+  position: absolute;
+  visibility: hidden;
+
+  &:checked + .toggle__label::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+
+  &:checked + .toggle__label::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+}
+
+.toggle__label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-deafault;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+
+  &::before {
+    top: 2px;
+    box-shadow: 0 9px 0 $color-deafault;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+
+  &::after {
+    bottom: 2px;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+}

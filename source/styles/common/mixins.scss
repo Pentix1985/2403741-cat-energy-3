@@ -13,3 +13,17 @@
   font-size: $font-size * 1px;
   color: $color;
 }
+
+@mixin container($container-mobile, $container-tablet, $container-desktop, $media-min-width-tablet, $media-min-width-desktop) {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: $container-mobile;
+
+  @media (min-width: $media-min-width-tablet) {
+    padding: $container-tablet;
+  }
+
+  @media (min-width: $media-min-width-desktop) {
+    padding: $container-desktop;
+  }
+}

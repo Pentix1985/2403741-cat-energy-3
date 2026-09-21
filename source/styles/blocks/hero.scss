@@ -1,12 +1,85 @@
 $hero-bg-image-height: 302px;
 $hero-bg-image-width: 320px;
-$color-transition-width: calc($hero-bg-image-width / 2 + 5px);
+
+.hero__container {
+  text-align: center;
+  padding-top: 27px;
+
+  @media (min-width: $break-point-tablet) {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "heading"
+      "text"
+      "imgbtn";
+
+    position: relative;
+    padding-top: 65px;
+
+    & picture {
+      grid-area: imgbtn;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $break-point-tablet) {
+    padding-top: 114px;
+  }
+}
+
+.hero__title {
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(60, $text-color-deafault, 60);
+    max-width: 416px;
+    text-align: left;
+    grid-area: heading;
+    margin-left: 90px;
+  }
+}
 
 .hero__text {
   @include font-height-color-size(14, $text-color-basic, 14);
   font-family: $secondary-font;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 29px;
+  padding: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, $text-color-deafault, 20);
+    max-width: 414px;
+    margin: 0;
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 21px;
+    grid-area: text;
+    margin-left: 90px;
+  }
 }
+
+.hero__image {
+  @media (min-width: $break-point-tablet) {
+    grid-area: imgbtn;
+  }
+}
+
+.hero__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(26, $color-basic, 20);
+    width: 244px;
+    padding: 14px 26px;
+    grid-area: imgbtn;
+    place-self: start start;
+    z-index: 2;
+    margin-top: 29px;
+    margin-left: 90px;
+  }
+}
+
 
 .hero--page-index {
   background-image:
@@ -17,8 +90,8 @@ $color-transition-width: calc($hero-bg-image-width / 2 + 5px);
     url("../../images/mobile/background/hero_index_background_mobile@2x.jpg"),
     linear-gradient(
       to right,
-      rgb(81, 81, 81, 1) 50%,
-      rgb(65, 65, 65, 1) 50%
+      rgb(81, 81, 81, 1) 46%,
+      rgb(65, 65, 65, 1) 54%
     ),
     linear-gradient(
       to right,
@@ -31,4 +104,55 @@ $color-transition-width: calc($hero-bg-image-width / 2 + 5px);
     $hero-bg-image-width auto,
     100% max(calc(100% - 138px), $hero-bg-image-height),
     100% 138px;
+
+  @media (min-width: $break-point-tablet) {
+    background: none;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    background-image:
+      linear-gradient(
+        to right,
+        $bg-primary-color
+      ),
+      url("../../images/desktop/background/hero_index_background_desktop@2x.jpg"),
+      linear-gradient(
+        to right,
+        rgb(81, 81, 81, 1) 45%,
+        rgb(65, 65, 65, 1) 60%
+      );
+    // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
+    background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
+    // 1041px ширина изображения в макете, но не ширина самой картинки
+    background-size: 50%, 1041px 694px, 50%;
+    background-repeat: no-repeat;
+  }
+  // @media (min-width: $break-point-desktop) {
+  //   &::before {
+  //     content: "";
+  //     width: 50%;
+  //     height: 100%;
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     background-image:
+  //       linear-gradient(
+  //         to right,
+  //         $bg-primary-color
+  //       ),
+  //       url("../../images/desktop/background/hero_index_background_desktop@2x.jpg"),
+  //       linear-gradient(
+  //         to right,
+  //         rgb(81, 81, 81, 1) 45%,
+  //         rgb(65, 65, 65, 1) 60%
+  //       );
+  //     // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
+  //     background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
+  //     // 1041px ширина изображения в макете, но не ширина самой картинки
+  //     background-size: 100%, 1041px 694px, 100%;
+  //     background-repeat: no-repeat;
+  //     z-index: -1;
+  //   }
+  // }
 }

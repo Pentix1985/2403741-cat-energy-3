@@ -4,7 +4,9 @@
   text-decoration: none;
   color: $text-color-basic;
   text-transform: uppercase;
-  background-color: $bg-primary-color;
+  background-color: $color-primary;
+  padding: 0;
+  display: block;
 }
 
 .button--secondary {

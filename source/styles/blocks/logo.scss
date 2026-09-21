@@ -2,6 +2,25 @@
   text-decoration: none;
 }
 
+.logo__text {
+  width: 118px;
+  height: 21px;
+
+  @media (min-width: $break-point-tablet) {
+    width: 101px;
+    height: 18px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
+.logo__trademark {
+  display: block;
+}
+
 .logo__text--footer {
   width: 128px;
   height: 24px;
