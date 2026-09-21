@@ -16,53 +16,67 @@
 <body class="page__body">
   <!-- Header -->
   <header class="header">
-    <a class="header__logo logo" href="index.html">
-      <img class="logo__trademark" src="#" alt="Товарный знак магазина Cat Energy" width="33" height="38">
-      <img class="logo__text" src="#" alt="Логотип магазина Cat Energy" width="101" height="18">
-    </a>
-    <nav class="header__navigation navigation navigation--enabled">
-      <button class="navigation__toggle toggle" type="button">
-        <span class="visually-hidden">
-          Кнопка меню
-        </span>
-      </button>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--active" href="index.html" aria-current="page">
-            Главная
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            Подбор программы
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__container container">
+      <a class="header__trademark" href="index.html">
+        <picture>
+          <source type="image/svg+xml" width="70" height="59" media="(min-width: 1440px)" srcset="images/logo_trademark_desktop.svg">
+          <source type="image/svg+xml" width="60" height="50" media="(min-width: 768px)" srcset="images/logo_trademark_tablet.svg">
+          <img class="logo__trademark" src="images/logo_trademark_mobile.svg" alt="Товарный знак магазина Cat Energy" width="33" height="38">
+        </picture>
+      </a>
+
+      <a class="header__logo logo" href="index.html">
+        <picture>
+          <source type="image/svg+xml" width="101" height="18" media="(min-width: 768px)" srcset="images/logo_text_tablet.svg">
+          <img class="logo__text" src="images/logo_text.svg" alt="Логотип магазина Cat Energy" width="101" height="18">
+        </picture>
+      </a>
+
+      <nav class="header__navigation navigation">
+        <div class="navigation__toggle toggle">
+          <input class="toggle__checkbox" type="checkbox" id="toggle-checkbox" name="toggle-checkbox">
+          <label class="toggle__label" for="toggle-checkbox"></label>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="index.html" aria-current="page">
+              Главная
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Содержимое - контент страницы -->
   <main class="main">
     <section class="hero hero--page-index">
-      <h1 class="hero__title heading heading--page-index">
-        Функциональное питание для котов
-      </h1>
-      <p class="hero__text">
-        Занялся собой? Займись котом!
-      </p>
-      <a class="hero__button button button--primary" href="#">
-        Подобрать программу
-      </a>
-      <picture>
-        <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/desktop/hero/hero_index_desktop@2x.png 1x, images/desktop/hero/hero_index_desktop@2x.png 2x">
-        <source type="image/jpeg" width="709" height="609" media="(min-width: 768px)" srcset="images/tablet/hero/hero_index_tablet@1x.jpg 1x, images/tablet/hero/hero_index_tablet@2x.jpg 2x">
-        <img class="hero__image" src="images/mobile/hero/hero_index_mobile@1x.png" srcset="images/mobile/hero/hero_index_mobile@2x.png 2x" alt="Банка с кормом Cat Energy pro со вкусом курицы" width="280" height="270">
-      </picture>
+      <div class="hero__container container">
+        <h1 class="hero__title heading heading--page-index">
+          Функциональное питание для котов
+        </h1>
+        <p class="hero__text">
+          Занялся собой? Займись котом!
+        </p>
+        <picture>
+          <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/desktop/hero/hero_index_desktop@2x.png 1x, images/desktop/hero/hero_index_desktop@2x.png 2x">
+          <source type="image/jpeg" width="709" height="609" media="(min-width: 768px)" srcset="images/tablet/hero/hero_index_tablet@1x.jpg 1x, images/tablet/hero/hero_index_tablet@2x.jpg 2x">
+          <img class="hero__image" src="images/mobile/hero/hero_index_mobile@1x.png" srcset="images/mobile/hero/hero_index_mobile@2x.png 2x" alt="Банка с кормом Cat Energy pro со вкусом курицы" width="280" height="270">
+        </picture>
+        <a class="hero__button button button--primary" href="#">
+          Подобрать программу
+        </a>
+      </div>
     </section>
     <section class="programs">
       <h2 class="visually-hidden">
@@ -70,7 +84,7 @@
       </h2>
 
       <ul class="programs__list">
-        <li class="programs__item program">
+        <li class="programs__item program program--slim">
           <h3 class="program__title title">
             Похудение
           </h3>
@@ -81,7 +95,7 @@
             Каталог slim
           </a>
         </li>
-        <li class="programs__item program">
+        <li class="programs__item program program--mass">
           <h3 class="program__title title">
             Набор массы
           </h3>
@@ -190,7 +204,7 @@
   <!-- Footer -->
   <footer class="footer">
     <a class="footer__logo logo" href="index.html">
-      <img class="logo__text logo__text--footer" src="#" alt="Логотип магазина Cat Energy" width="101" height="18">
+      <img class="logo__text logo__text--footer" src="images/logo_text.svg" alt="Логотип магазина Cat Energy" width="128" height="24">
     </a>
     <ul class="footer__social-list social-list">
       <li class="social-list__item">
@@ -219,7 +233,11 @@
       <span class="educational-provider__name">
         HTML Academy
       </span>
-      <img class="educational-provider__logo" src="#" alt="Логотип htmlacademy" width="27" height="34">
+      <svg class="educational-provider__logo" viewBox="0 0 27 34" role="img" fill="none" xmlns="http://www.w3.org/2000/svg" width="27" height="34">
+        <g clip-path="url(#a)">
+          <path d="m13.64.02-.14-.02-13.5 1.4v24.61l13.5 7.99 13.5-7.99v-24.6l-13.36-1.4Zm11.6 25-11.74 6.94-11.73-6.94v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83v-5.21l3.62-2.15v10.26Zm0-11.57-3.23 1.88-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19-11.62-6.87 11.63-6.96 11.8 6.83Zm0-1.22-11.8-6.92-11.67 6.91v-9.23l11.73-1.23 11.73 1.23v9.24Z" />
+        </g>
+      </svg>
     </a>
   </footer>
 </body>

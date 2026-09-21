@@ -1,3 +1,22 @@
-.educational-provider__name {
-  @include font-height-color-size(20, null, 16);
+.educational-provider {
+  @include font-height-color-size(20, $text-color, 16);
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover .educational-provider__logo {
+    fill: $color-primary;
+  }
+
+  &:active .educational-provider__logo {
+    fill: $color-primary;
+    opacity: 30%;
+  }
+
+  &:active .educational-provider__name {
+    opacity: 30%;
+  }
+}
+
+.educational-provider__logo {
+  fill: $color-social;
 }

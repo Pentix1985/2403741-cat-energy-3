@@ -1,5 +1,14 @@
 .program {
   background-color: $bg-secondary-color;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 56px;
+  }
 }
 
 .program__title {
@@ -12,4 +21,35 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $text-color-deafault;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &::after {
+    content: "";
+    background-color: currentColor;
+    width: 32px;
+    height: 10px;
+    mask-image: url("../../icons/stack.svg#arrow_right");
+    mask-position: -8px;
+    mask-size: 24px 10px;
+    mask-repeat: no-repeat;
+    transition: mask-position 0.2s ease-in-out;
+  }
+
+  &:hover::after {
+    mask-position: 0;
+  }
+}
+
+.program--slim::before {
+  background-image: url("../../icons/stack.svg#cat_slim"), radial-gradient(circle 25px at center, $color-primary 100%, transparent 100%);
+  background-size: 36px 50px, auto;
+  background-position: 50%, 50% calc(50% + 3px);
+}
+
+.program--mass::before {
+  background-image: url("../../icons/stack.svg#cat_pro"), radial-gradient(circle 25px at center, $color-primary 100%, transparent 100%);
+  background-size: 67px 28px, auto;
+  background-position: 50% calc(50% + 2px), 50% calc(50% + 3px);
 }
