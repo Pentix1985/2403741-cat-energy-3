@@ -10,6 +10,11 @@
       display: flex;
     }
   }
+
+  @media (min-width: $break-point-desktop) {
+    display: flex;
+    max-width: 590px;
+  }
 }
 
 .navigation__toggle {
