@@ -1,7 +1,4 @@
 .toggle {
-  width: 24px;
-  height: 24px;
-
   @media (min-width: $break-point-tablet) {
     display: none;
   }
@@ -9,7 +6,6 @@
 
 .toggle__checkbox {
   position: absolute;
-  visibility: hidden;
 
   &:checked + .toggle__label::before {
     top: 11px;
@@ -22,6 +18,11 @@
     bottom: 11px;
     transform: rotate(-45deg);
     transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+
+  &:focus-visible + .toggle__label {
+    outline: auto; /* Или цвет вашего бренда */
+    outline-offset: 2px;
   }
 }
 

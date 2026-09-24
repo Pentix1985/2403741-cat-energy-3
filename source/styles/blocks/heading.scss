@@ -2,9 +2,16 @@
   @include font-height-color-size(36, $text-color-deafault, 36);
   font-family: $secondary-font;
   font-weight: 400;
-  margin: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(60, $text-color-deafault, 60);
+  }
 }
 
 .heading--page-index {
   color: $text-color-basic;
+
+  @media (min-width: $break-point-tablet) {
+    color: $text-color-deafault;
+  }
 }

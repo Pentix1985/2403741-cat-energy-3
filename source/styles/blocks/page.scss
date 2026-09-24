@@ -11,4 +11,65 @@
   font-size: 14px;
   line-height: 18px;
   color: $text-color;
+
+  @media (min-width: $break-point-desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      /* Растягиваем фон от первой строки (header) до конца второй строки (hero) */
+      grid-row: 1 / span 2;
+      height: 100%;
+      z-index: -1; /* Уводим под текст */
+
+      /* Прижимаем картинку к правому нижнему углу строго в рамках этих двух строк */
+      background-image:
+        linear-gradient(
+          to right,
+          $bg-primary-color
+        ),
+        url("../../images/desktop/background/hero_index_background_desktop@2x.jpg"),
+        linear-gradient(
+          to right,
+          rgb(81, 81, 81, 1) 45%,
+          rgb(65, 65, 65, 1) 60%
+        );
+      // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
+      background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
+      // 1041px ширина изображения в макете, но не ширина самой картинки
+      background-size: 50%, 1041px 694px, 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // @media (min-width: $break-point-desktop) {
+  //   background-image: // linear-gradient(
+  //     //   to right,
+  //     //   $bg-primary-color
+  //     // ),
+  //     url("../../images/desktop/background/hero_index_background_desktop@2x.jpg");
+  //   // linear-gradient(
+  //   //   to right,
+  //   //   rgb(81, 81, 81, 1) 45%,
+  //   //   rgb(65, 65, 65, 1) 60%
+  //   // );
+  //   // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
+  //   // background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
+  //   // 1041px ширина изображения в макете, но не ширина самой картинки
+  //   // background-size: 50%, 1041px 694px, 50%;
+  //   background-position: right bottom;
+  //   background-size: 1041px 694px;
+  //   background-repeat: no-repeat;
+  // }
+}
+
+.page__header {
+  width: 100%;
 }
