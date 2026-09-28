@@ -1,3 +1,11 @@
+.contacts__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  padding-top: 26px;
+  row-gap: 26px;
+}
+
 .contacts {
   background-color: $bg-secondary-color;
 }
@@ -6,13 +14,25 @@
   @include font-height-color-size(20, $text-color-subscribe, 16);
   font-family: $secondary-font;
   text-transform: uppercase;
+  grid-row: 1;
+  grid-column: 1;
+  padding-right: 15px;
 }
 
 .contacts__text {
   @include font-height-color-size(20);
   font-style: normal;
+  grid-row: 1;
+  grid-column: 2;
 }
 
 .contacts--first-page {
   background-color: $color-basic;
+}
+
+.map {
+  & img {
+    display: block;
+    width: 100%;
+  }
 }

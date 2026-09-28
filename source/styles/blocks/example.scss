@@ -1,28 +1,135 @@
 .example {
   background-color: $bg-secondary-color;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: $break-point-tablet) {
+    padding-top: 45px;
+  }
+}
+
+.example__container {
+  position: relative;
 }
 
 .example__title {
   @include font-height-color-size(40, null, 36);
+  margin-bottom: 40px;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(60, null, 60);
+    margin-bottom: 60px;
+  }
+}
+
+.example__description {
+  margin: 0 0 20px;
+  padding: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(24, $text-color, 16);
+    margin-bottom: 55px;
+  }
+}
+
+.example__info {
+  @media (min-width: $break-point-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__results {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 0 20px;
+  padding: 0;
+  align-items: start;
+
+  @media (min-width: $break-point-tablet) {
+    grid-template-columns: 162px 162px;
+    gap: 43px;
+  }
+}
+
+.example__result-item {
+  display: grid;
+  justify-items: center;
 }
 
 .example__result-value {
   @include font-height-color-size(24, $text-color-deafault, 24);
   font-family: $secondary-font;
+  margin: 0;
+  order: -1;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  padding: 15px 19px 18px 18px;
+  text-align: center;
+  justify-self: stretch;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(37, $text-color-deafault, 30);
+  }
 }
 
 .example__result-description {
   @include font-height-color-size(12, $text-color, 12);
+  text-transform: lowercase;
+  max-width: 87px;
+  background-color: #f2f2f2;
+  margin-top: -8px;
+  text-align: center;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  @media (min-width: $break-point-tablet) {
+    max-width: none;
+  }
 }
 
 .example__total {
   @include font-height-color-size(20, $text-color-deafault, 14);
   font-family: $secondary-font;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, $text-color-deafault, 20);
+    text-align: right;
+    margin: 11px 0 0;
+    max-width: 175px;
+  }
 }
 
 .example__total-price {
   @include font-height-color-size(20, $text-color-deafault, 14);
   font-family: $secondary-font;
   text-transform: uppercase;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, $text-color-deafault, 20);
+    margin: 0;
+    display: inline-block;
+    padding-top: 9px;
+  }
+}
+
+.example__compare-slider {
+  width: 280px;
+  height: 256px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+
+  & picture {
+    grid-row: 1;
+    grid-column: 1;
+  }
 }

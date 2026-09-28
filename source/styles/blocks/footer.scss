@@ -1,3 +1,33 @@
 .footer {
   background-color: $bg-secondary-color;
 }
+
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__logo {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border-color;
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid $color-border-color;
+}
+
+.educational-provider {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}

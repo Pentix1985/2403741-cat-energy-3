@@ -1,21 +1,80 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $break-point-tablet) {
+    border-bottom: 1px solid $color-border-section;
+  }
+}
+
 .advantages__title {
   @include font-height-color-size(40, null, 36);
   font-family: $secondary-font;
+  margin-bottom: 40px;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(60, null, 60);
+    margin-bottom: 32px;
+  }
 }
 
 .advantages__list {
+  counter-reset: num 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $break-point-tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 37px;
+  }
 }
 
-.advantages__item::before {
-  content: "";
-  display: inline-block;
-  background-color: $color-primary;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+.advantages__item {
+  display: flex;
+  position: relative;
+  counter-increment: num;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: $color-primary;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $break-point-tablet) {
+    max-width: 250px;
+    min-height: 280px;
+    flex-direction: column;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      z-index: -1;
+      content: counter(num);
+      color: $text-color-count;
+      width: auto;
+      height: 100%;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }
 
 .advantages__item--leaf::before {
@@ -40,4 +99,13 @@
   background-image: url("../../icons/stack.svg#alarm");
   background-size: 27px 31px;
   background-position: center center;
+}
+
+.advantages__description {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(24, null, 16);
+  }
 }

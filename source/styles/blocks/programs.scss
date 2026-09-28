@@ -2,4 +2,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.programs__item {
+  @media (min-width: $break-point-tablet) {
+    min-height: 372px;
+  }
 }
