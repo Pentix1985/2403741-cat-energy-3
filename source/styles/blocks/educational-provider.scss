@@ -1,7 +1,7 @@
 .educational-provider {
   @include font-height-color-size(20, $text-color, 16);
   text-decoration: none;
-  display: inline-block;
+  display: flex;
 
   &:hover .educational-provider__logo {
     fill: $color-primary;
