@@ -17,7 +17,25 @@ function initSlider() {
   });
 }
 
+function checkJS() {
+  const header = document.querySelector('header');
+  header.classList.remove('disabled-js');
+
+  const headerNavigation = document.querySelector('.header__navigation');
+  headerNavigation.classList.remove('header__navigation--disabled-js');
+
+  const navigation = document.querySelector('.navigation__toggle');
+  navigation.classList.remove('navigation__toggle--disabled-js');
+
+  const headerContainer = document.querySelector('.header__container');
+  headerContainer.classList.remove('header__container-disabled-js');
+
+  const navigationList = document.querySelector('.navigation__list');
+  navigationList.classList.remove('navigation__list-disabled-js');
+}
+
 function initApp() {
+  checkJS();
   initSlider();
 }
 

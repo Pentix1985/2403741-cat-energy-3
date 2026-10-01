@@ -1,5 +1,13 @@
 .logo {
   text-decoration: none;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .logo__text {

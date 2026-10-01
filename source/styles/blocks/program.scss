@@ -51,15 +51,31 @@
       mask-repeat: no-repeat;
     }
   }
+
+  @media (min-width: $break-point-desktop) {
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 42px;
+      left: 52px;
+      right: 0;
+    }
+  }
 }
 
 .program__title {
   text-transform: uppercase;
   margin-left: 70px;
+  margin-bottom: 29px;
 
   @media (min-width: $break-point-tablet) {
     margin-left: 0;
     margin-bottom: 24px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 73px;
+    margin-left: 162px;
   }
 }
 
@@ -88,6 +104,10 @@
     mask-position: 0;
   }
 
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(20, $text-color-deafault, 20);
   }
@@ -108,6 +128,15 @@
     width: 140px;
     height: 194px;
   }
+
+  @media (min-width: $break-point-desktop) {
+    mask-size: 70px 97px;
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    right: 0;
+    left: 67px;
+  }
 }
 
 .program--mass::after {
@@ -124,6 +153,15 @@
     width: 268px;
     height: 112px;
   }
+
+  @media (min-width: $break-point-desktop) {
+    mask-size: 134px 56px;
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    right: 0;
+    left: 33px;
+  }
 }
 
 .program__description {
@@ -137,5 +175,9 @@
     padding: 0;
     margin-bottom: 48px;
     flex-grow: 1;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 27px;
   }
 }

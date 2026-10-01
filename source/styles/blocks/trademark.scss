@@ -3,6 +3,14 @@
   height: 38px;
   display: block;
 
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   @media (min-width: $break-point-tablet) {
     width: 60px;
     height: 50px;

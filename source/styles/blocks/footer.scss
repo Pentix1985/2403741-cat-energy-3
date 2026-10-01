@@ -5,6 +5,12 @@
 .footer__container {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $break-point-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__logo {
@@ -12,6 +18,11 @@
   text-align: center;
   padding-bottom: 20px;
   border-bottom: 1px solid $color-border-color;
+
+  @media (min-width: $break-point-tablet) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .footer__social-list {
@@ -23,6 +34,11 @@
   padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px solid $color-border-color;
+
+  @media (min-width: $break-point-tablet) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .educational-provider {
@@ -30,4 +46,15 @@
   padding-top: 20px;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $break-point-tablet) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.educational-provider__name {
+  @media (min-width: $break-point-tablet) {
+    margin-right: 23px;
+  }
 }

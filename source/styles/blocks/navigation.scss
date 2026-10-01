@@ -18,6 +18,8 @@
 }
 
 .navigation__toggle {
+  grid-column: 3 / 4;
+  place-self: center end;
   width: 24px;
   height: 24px;
 }
@@ -38,6 +40,7 @@
     gap: 33px;
     flex-wrap: wrap;
     position: static;
+    justify-content: flex-end;
   }
 
   @media (min-width: $break-point-desktop) {
@@ -71,6 +74,14 @@
   text-align: center;
   padding: 22px 0 24px;
 
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(24, $text-color-deafault, 18);
     padding: 0;
@@ -102,4 +113,18 @@
       bottom: -18px;
     }
   }
+}
+
+.navigation__toggle--disabled-js {
+  display: none;
+}
+
+.navigation__list-disabled-js {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  grid-column: 1 / -1;
+  width: auto;
+  margin-right: -20px;
+  margin-left: -20px;
 }

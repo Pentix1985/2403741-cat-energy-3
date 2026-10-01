@@ -15,8 +15,8 @@
 
 <body class="page__body">
   <!-- Header -->
-  <header class="page__header header">
-    <div class="header__container container">
+  <header class="page__header header disabled-js">
+    <div class="header__container container header__container-disabled-js">
       <a class="header__trademark trademark" href="index.html">
         <picture>
           <source type="image/svg+xml" width="70" height="59" media="(min-width: 1440px)" srcset="images/logo_trademark_desktop.svg">
@@ -32,8 +32,8 @@
         </picture>
       </a>
 
-      <nav class="header__navigation navigation">
-        <div class="navigation__toggle toggle">
+      <nav class="header__navigation navigation header__navigation--disabled-js">
+        <div class="navigation__toggle toggle navigation__toggle--disabled-js">
           <input class="toggle__checkbox visually-hidden" type="checkbox" id="toggle-checkbox" name="toggle-checkbox">
           <label class="toggle__label" for="toggle-checkbox">
             <span class="visually-hidden">
@@ -41,7 +41,7 @@
             </span>
           </label>
         </div>
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list-disabled-js">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--active" href="index.html" aria-current="page">
               Главная
@@ -149,7 +149,7 @@
           Живой пример
         </h2>
         <p class="example__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          Борис сбросил 5 кг&nbsp;за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;<nobr>по-прежнему</nobr> спит по&nbsp;16 часов в&nbsp;день.
         </p>
         <div class="example__info">
           <dl class="example__results">
@@ -171,7 +171,7 @@
             </div>
           </dl>
           <p class="example__total">
-            Затраты на питание:<br>
+            Затраты на питание:
             <span class="example__total-price">
               15 000 Руб.
             </span>
@@ -203,7 +203,12 @@
           Приглашаем к сотрудничеству дилеров!
         </h2>
         <address class="contacts__text">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          <span>
+            ул. Большая Конюшенная, д. 19/8
+          </span>
+          <span class="contacts__settlement-name">
+            Санкт-Петербург
+          </span>
         </address>
       </header>
 

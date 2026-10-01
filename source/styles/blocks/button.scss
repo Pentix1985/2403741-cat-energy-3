@@ -7,6 +7,14 @@
   background-color: $color-primary;
   padding: 10px 20px;
   display: block;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--secondary {
