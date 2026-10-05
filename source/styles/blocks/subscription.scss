@@ -1,5 +1,20 @@
+.subscription {
+  padding-top: 40px;
+}
+
 .subscription__title {
   @include font-height-color-size(24, null, 24);
+  display: grid;
+  grid-template-columns: auto minmax(20px, 1fr);
+  align-items: center;
+  padding-left: 20px;
+  column-gap: 40px;
+  margin: 0 0 32px;
+
+  &::after {
+    content: "";
+    border-top: 2px solid $color-primary;
+  }
 }
 
 .subscription__text {

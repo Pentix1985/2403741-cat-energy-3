@@ -1,10 +1,14 @@
 $hero-bg-image-height: 302px;
 $hero-bg-image-width: 320px;
 
+.hero {
+  border-bottom: 1px solid $color-border-hero;
+}
+
 .hero__container {
   text-align: center;
   padding-top: 27px;
-  padding-bottom: 20px;
+  padding-bottom: 41px;
 
   @media (min-width: $break-point-tablet) {
     display: grid;
@@ -40,6 +44,7 @@ $hero-bg-image-width: 320px;
 
 .hero__title {
   margin: 0;
+  text-align: left;
 
   @media (min-width: $break-point-tablet) {
     max-width: 416px;
@@ -139,5 +144,17 @@ $hero-bg-image-width: 320px;
 
   @media (min-width: $break-point-tablet) {
     background: none;
+  }
+
+  border-bottom: none;
+}
+
+.hero__title--index {
+  text-align: center;
+  color: $color-basic;
+
+  @media (min-width: $break-point-tablet) {
+    color: $text-color-deafault;
+    text-align: left;
   }
 }
