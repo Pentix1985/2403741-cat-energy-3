@@ -1,3 +1,40 @@
+.show-more {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    border-top: 2px solid #d3d3d3;
+    position: absolute;
+    width: 30px;
+    top: 39px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    border-left: 2px solid #d3d3d3;
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.show-more__title {
+  text-align: center;
+  margin: 53px 0 8px;
+}
+
 .show-more__description {
   @include font-height-color-size(16, null, 12);
+  text-align: center;
+  margin: 0 0 21px;
+}
+
+.show-more__link {
+  text-align: center;
 }

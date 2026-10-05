@@ -3,10 +3,11 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
+@import "./common/container.scss";
 
 /* BLOCKS */
-@import "./blocks/container.scss";
 @import "./blocks/visually-hidden.scss";
+@import "./blocks/trademark.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/button.scss";
 @import "./blocks/heading.scss";

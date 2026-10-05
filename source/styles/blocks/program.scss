@@ -1,26 +1,89 @@
 .program {
   background-color: $bg-secondary-color;
+  position: relative;
+  padding: 30px 33px 18px 20px;
 
   &::before {
     content: "";
-    display: inline-block;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    display: block;
+    background-color: $color-primary;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+  }
+
+  &::after {
+    content: "";
+    background-color: $color-deafault;
     width: 67px;
-    height: 56px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    mask-repeat: no-repeat;
+  }
+
+  @media (min-width: $break-point-tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: 77px 316px 53px 53px;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: $color-primary;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 92px;
+      left: auto;
+      right: 63px;
+    }
+
+    &::after {
+      content: "";
+      background-color: $color-deafault;
+      display: block;
+      position: absolute;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: $break-point-desktop) {
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 42px;
+      left: 52px;
+      right: 0;
+    }
   }
 }
 
 .program__title {
   text-transform: uppercase;
+  margin-left: 70px;
+  margin-bottom: 29px;
+
+  @media (min-width: $break-point-tablet) {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 73px;
+    margin-left: 162px;
+  }
 }
 
 .program__link {
-  @include font-height-color-size(16, $text-color, 16);
+  @include font-height-color-size(16, $text-color-deafault, 16);
   font-family: $secondary-font;
   text-transform: uppercase;
   text-decoration: none;
-  color: $text-color-deafault;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -40,16 +103,81 @@
   &:hover::after {
     mask-position: 0;
   }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, $text-color-deafault, 20);
+  }
 }
 
-.program--slim::before {
-  background-image: url("../../icons/stack.svg#cat_slim"), radial-gradient(circle 25px at center, $color-primary 100%, transparent 100%);
-  background-size: 36px 50px, auto;
-  background-position: 50%, 50% calc(50% + 3px);
+.program--slim::after {
+  top: 21px;
+  left: 10px;
+  mask-image: url("../../icons/stack.svg#cat_slim");
+  mask-position: 50%;
+  mask-size: 36px 50px;
+
+  @media (min-width: $break-point-tablet) {
+    top: 81px;
+    right: 93px;
+    left: auto;
+    mask-size: 140px 194px;
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    mask-size: 70px 97px;
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    right: 0;
+    left: 67px;
+  }
 }
 
-.program--mass::before {
-  background-image: url("../../icons/stack.svg#cat_pro"), radial-gradient(circle 25px at center, $color-primary 100%, transparent 100%);
-  background-size: 67px 28px, auto;
-  background-position: 50% calc(50% + 2px), 50% calc(50% + 3px);
+.program--mass::after {
+  top: 35px;
+  left: 12px;
+  mask-image: url("../../icons/stack.svg#cat_pro");
+  mask-size: 67px 28px;
+
+  @media (min-width: $break-point-tablet) {
+    top: 135px;
+    right: 29px;
+    left: auto;
+    mask-size: 268px 112px;
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    mask-size: 134px 56px;
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    right: 0;
+    left: 33px;
+  }
+}
+
+.program__description {
+  padding-bottom: 23px;
+  border-bottom: 1px solid $color-border-color;
+  margin: 0 0 15px;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(24, $text-color-deafault, 16);
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 48px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 27px;
+  }
 }

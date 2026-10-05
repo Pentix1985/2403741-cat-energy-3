@@ -1,5 +1,28 @@
+.programs__container {
+  @media (min-width: $break-point-desktop) {
+    padding-top: 82px;
+  }
+}
+
 .programs__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $break-point-desktop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.programs__item {
+  @media (min-width: $break-point-tablet) {
+    min-height: 372px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    padding: 77px 61px 55px 52px;
+  }
 }

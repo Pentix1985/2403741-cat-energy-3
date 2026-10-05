@@ -1,63 +1,65 @@
-.header {
-  width: 100%;
-
-  @media (min-width: $break-point-desktop) {
-    position: absolute;
-    background: transparent;
-    z-index: 1;
-  }
-}
-
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-top: 13px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
+  row-gap: 15px;
 
   @media (min-width: $break-point-tablet) {
+    grid-template-columns: max-content auto auto;
+    align-items: center;
+    column-gap: 13px;
     padding-top: 25px;
     padding-bottom: 0;
   }
 
   @media (min-width: $break-point-desktop) {
+    column-gap: 14px;
     padding-top: 55px;
   }
 }
 
 .header__trademark {
-  @media (min-width: $break-point-tablet) {
-    flex-shrink: 0;
-    margin-right: 13px;
-  }
-
-  @media (min-width: $break-point-desktop) {
-    margin-right: 14px;
-  }
+  justify-self: start;
+  min-width: max-content;
 }
 
 .header__logo {
-  @media (min-width: $break-point-tablet) {
-    flex-shrink: 0;
-    margin-right: auto;
-  }
+  place-self: center center;
+  min-width: max-content;
 
-  @media (min-width: $break-point-desktop) {
-    flex-shrink: 0;
-    margin-right: 408px;
+  @media (min-width: $break-point-tablet) {
+    margin-right: auto;
   }
 }
 
 .header__navigation {
-  display: block;
+  grid-column: 1 / -1;
+  margin-left: -20px;
+  margin-right: -20px;
+  display: contents;
 
   @media (min-width: $break-point-tablet) {
-    margin-left: 94px;
+    grid-column: 3 / 4;
+    margin-left: 0;
+    margin-right: 0;
+    justify-self: end;
   }
 
   @media (min-width: $break-point-desktop) {
-    width: 610px;
-    margin-left: 0;
-    background: transparent;
+    margin-left: 135px;
   }
+}
+
+.header__container-disabled-js {
+  padding-bottom: 0;
+}
+
+.header__navigation--disabled-js {
+  display: flex;
+  flex-direction: column;
+}
+
+.header--index {
+  border: none;
 }

@@ -1,10 +1,18 @@
 .logo {
   text-decoration: none;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .logo__text {
-  width: 118px;
-  height: 21px;
+  width: 101px;
+  height: 18px;
 
   @media (min-width: $break-point-tablet) {
     width: 101px;
