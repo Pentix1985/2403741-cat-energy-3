@@ -3,6 +3,8 @@
   padding-bottom: 49px;
 
   @media (min-width: $break-point-tablet) {
+    padding-top: 45px;
+    padding-bottom: 47px;
     border-bottom: 1px solid $color-border-section;
   }
 
@@ -19,7 +21,7 @@
 
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(60, null, 60);
-    margin-bottom: 72px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $break-point-desktop) {

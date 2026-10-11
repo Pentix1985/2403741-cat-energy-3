@@ -1,5 +1,15 @@
 .subscription {
   padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $break-point-tablet) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    padding-top: 96px;
+    padding-bottom: 104px;
+  }
 }
 
 .subscription__title {
@@ -15,16 +25,61 @@
     content: "";
     border-top: 2px solid $color-primary;
   }
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(32, null, 32);
+    padding-left: 0;
+    margin-bottom: 80px;
+    grid-template-columns: 30px auto minmax(30px, 1fr);
+
+    &::before {
+      content: "";
+      border-top: 2px solid $color-primary;
+    }
+  }
+
+  @media (min-width: $break-point-desktop) {
+    grid-template-rows: auto;
+    grid-template-columns: minmax(70px, calc(50vw - 610px)) fit-content(1220px) minmax(70px, 1fr);
+    gap: 0;
+
+    &::before {
+      margin-right: 40px;
+    }
+
+    &::after {
+      margin-left: 40px;
+    }
+  }
 }
 
 .subscription__text {
   @include font-height-color-size(24, $text-color-deafault, 16);
+  font-family: $secondary-font;
+  margin: 0 0 24px;
+  text-align: center;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(32, $text-color-deafault, 24);
+    margin: 0 30px 24px;
+    padding: 0 38px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin: 0 auto 24px;
+    max-width: 1220px;
+    padding: 0;
+  }
 }
 
-.subscribe-form__mail {
-  @include font-height-color-size(20, $text-color, 20);
-  font-family: $secondary-font;
-  text-transform: uppercase;
-  padding: 0;
-  height: 56px;
+.subscription__form {
+  @media (min-width: $break-point-tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    max-width: 752px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

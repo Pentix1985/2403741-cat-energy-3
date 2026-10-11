@@ -5,40 +5,111 @@
   display: grid;
   grid-template-columns: 140px 1fr;
   border-bottom: 1px solid $color-border-hero;
+
+  @media (min-width: $break-point-tablet) {
+    grid-template-columns: 1fr;
+    padding: 10px 37px 40px;
+    background-color: $bg-secondary-color;
+    background-image: linear-gradient(to bottom, $color-basic 81px, transparent 1%);
+    justify-content: center;
+  }
 }
 
 .product-card__image-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $break-point-tablet) {
+    width: 200px;
+    height: 210px;
+    justify-self: center;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    width: 169px;
+    height: 210px;
+    margin-bottom: 12px;
+  }
+}
+
+.product-card__info {
+  @media (min-width: $break-point-tablet) {
+    margin-bottom: 32px;
+  }
 }
 
 .product-card__order-button {
   margin-top: 17px;
   grid-column: 1 / -1;
   text-align: center;
+
+  @media (min-width: $break-point-tablet) {
+    margin-top: 0;
+  }
 }
 
 .product-card__title-link {
+  display: block;
   text-decoration: none;
   margin: 0;
+
+  @media (min-width: $break-point-tablet) {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 24px;
+  }
 }
 
 .product-card__title {
   margin: 0 0 14px;
   max-width: 76px;
+
+  @media (min-width: $break-point-tablet) {
+    max-width: 135px;
+    margin: 0;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin: 0 auto;
+  }
+}
+
+.product-card__details-list {
+  @media (min-width: $break-point-tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .product-card__detail {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $break-point-tablet) {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-border-catalog;
+  }
 }
 
 .product-card__detail-title {
   @include font-height-color-size(16, null, 12);
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, null, 16);
+  }
 }
 
 .product-card__detail-value {
   @include font-height-color-size(16, null, 12);
   margin: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(20, null, 16);
+  }
 }

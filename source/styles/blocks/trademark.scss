@@ -1,8 +1,4 @@
-.trademark__image {
-  width: 33px;
-  height: 38px;
-  display: block;
-
+.trademark {
   &:hover {
     opacity: 80%;
   }
@@ -10,6 +6,12 @@
   &:active {
     opacity: 60%;
   }
+}
+
+.trademark__image {
+  width: 33px;
+  height: 38px;
+  display: block;
 
   @media (min-width: $break-point-tablet) {
     width: 60px;

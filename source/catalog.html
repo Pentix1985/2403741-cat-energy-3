@@ -75,7 +75,7 @@
       <h2 class="visually-hidden">
         Список кормов для кошек
       </h2>
-      <ul class="catalog__products-cards-list products-cards-list">
+      <ul class="catalog__products-cards-list products-cards-list container">
         <li class="catalog__product-card product-card">
           <a class="product-card__image-link" href="#" tabindex="-1">
             <picture>
@@ -391,18 +391,18 @@
             Заказать
           </a>
         </li>
+        <li class="catalog__show-more show-more">
+          <p class="show-more__title sub-title">
+            Показать еще 100500 товаров
+          </p>
+          <p class="show-more__description">
+            На самом деле вкусов гораздо больше!
+          </p>
+          <a class="show-more__link button button--secondary" href="#">
+            Показать все
+          </a>
+        </li>
       </ul>
-      <div class="catalog__show-more show-more">
-        <p class="show-more__title sub-title">
-          Показать еще 100500 товаров
-        </p>
-        <p class="show-more__description">
-          На самом деле вкусов гораздо больше!
-        </p>
-        <a class="show-more__link button button--secondary" href="#">
-          Показать все
-        </a>
-      </div>
     </section>
     <section class="additional-products">
       <h2 class="additional-products__title title">
@@ -492,10 +492,10 @@
       <h2 class="subscription__title title">
         Акции и новинки
       </h2>
-      <p class="subscription__text">
+      <p class="subscription__text container">
         Подпишитесь на наши новости и не пропустите ни одного предложения!
       </p>
-      <form class="subscription__form subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="subscription__form subscribe-form container" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="form-user-mail">
           Почта пользователя
         </label>
@@ -506,12 +506,20 @@
       </form>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">
-        Приглашаем к сотрудничеству дилеров!
-      </h2>
-      <address class="contacts__text">
-        ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-      </address>
+      <header class="contacts__header container">
+        <h2 class="contacts__title title">
+          Приглашаем к сотрудничеству дилеров!
+        </h2>
+        <address class="contacts__text">
+          <span>
+            ул. Большая Конюшенная, д. 19/8
+          </span>
+          <span class="contacts__settlement-name">
+            Санкт-Петербург
+          </span>
+        </address>
+      </header>
+
       <div class="contacts__map map">
         <picture>
           <source type="image/jpeg" width="1440" height="400" media="(min-width: 1440px)" srcset="images/desktop/map/map_desktop@1x.jpg 1x, images/desktop/map/map_desktop@2x.jpg 2x">

@@ -3,6 +3,10 @@ $hero-bg-image-width: 320px;
 
 .hero {
   border-bottom: 1px solid $color-border-hero;
+
+  @media (min-width: $break-point-tablet) {
+    border: none;
+  }
 }
 
 .hero__container {
@@ -25,11 +29,11 @@ $hero-bg-image-width: 320px;
       grid-area: imgbtn;
       z-index: 1;
     }
+    padding-bottom: 84px;
   }
 
   @media (min-width: $break-point-desktop) {
     padding-top: 29px;
-    padding-left: 190px;
     padding-bottom: 52px;
     grid-template-areas: none;
     grid-template-columns: 1fr 1fr;
@@ -47,10 +51,8 @@ $hero-bg-image-width: 320px;
   text-align: left;
 
   @media (min-width: $break-point-tablet) {
-    max-width: 416px;
     text-align: left;
     grid-area: heading;
-    margin-left: 90px;
   }
 
   @media (min-width: $break-point-desktop) {
@@ -141,12 +143,26 @@ $hero-bg-image-width: 320px;
     $hero-bg-image-width auto,
     100% max(55%, $hero-bg-image-height),
     100% 55%;
+  margin-bottom: 20px;
 
   @media (min-width: $break-point-tablet) {
     background: none;
   }
 
+  @media (min-width: $break-point-desktop) {
+    margin-bottom: 0;
+  }
+
   border-bottom: none;
+}
+
+.hero__container--index {
+  padding-bottom: 0;
+
+  @media (min-width: $break-point-desktop) {
+    padding-bottom: 52px;
+    padding-left: 190px;
+  }
 }
 
 .hero__title--index {
@@ -156,5 +172,11 @@ $hero-bg-image-width: 320px;
   @media (min-width: $break-point-tablet) {
     color: $text-color-deafault;
     text-align: left;
+    margin-left: 90px;
+    max-width: 416px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    margin-left: 0;
   }
 }

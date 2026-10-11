@@ -24,6 +24,10 @@
     color: $color-primary;
   }
 
+  &:focus-visible {
+    color: $color-primary;
+  }
+
   &:active {
     color: $color-primary;
     opacity: 30%;

@@ -2,15 +2,6 @@
   flex-grow: 1;
 
   @media (min-width: $break-point-desktop) {
-    // display: grid;
-    // grid-template-rows: subgrid;
-    // // grid-row: 2 / -1;
     display: contents;
-
-    // & > section:not(.hero) {
-    //   background-color: #ffffff;
-    //   position: relative;
-    //   z-index: 1;
-    // }
   }
 }

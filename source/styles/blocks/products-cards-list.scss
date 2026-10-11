@@ -1,4 +1,18 @@
 .products-cards-list {
   padding: 0;
   list-style: none;
+
+  @media (min-width: $break-point-tablet) {
+    @include container($container-mobile, $container-tablet, $container-desktop, $break-point-tablet, $break-point-desktop);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 324px);
+    gap: 60px;
+    justify-content: center;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    justify-content: normal;
+    grid-template-columns: repeat(auto-fit, 245px);
+    gap: 63px 80px;
+  }
 }

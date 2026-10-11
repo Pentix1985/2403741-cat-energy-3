@@ -16,6 +16,10 @@
 .page__header {
   width: 100%;
   border-bottom: 1px solid $color-border-color;
+
+  @media (min-width: $break-point-tablet) {
+    border: none;
+  }
 }
 
 .page__body--index {
@@ -56,4 +60,3 @@
     }
   }
 }
-

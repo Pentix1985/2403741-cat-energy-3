@@ -20,4 +20,12 @@
 .button--secondary {
   color: $text-color;
   background-color: $bg-secondary-color;
+
+  &:hover {
+    background-color: $color-button-secondary-hover;
+  }
+
+  &:active {
+    background-color: $color-button-secondary-active;
+  }
 }
