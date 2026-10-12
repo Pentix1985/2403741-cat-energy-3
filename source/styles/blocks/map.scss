@@ -1,2 +1,14 @@
-// .map {
-// }
+.map {
+  display: grid;
+  place-items: center;
+}
+
+.map iframe {
+  display: block;
+  border: none;
+  width: 100%;
+
+  @media (min-width: $break-point-tablet) {
+    min-height: 400px;
+  }
+}
