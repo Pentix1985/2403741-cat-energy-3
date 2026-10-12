@@ -2,7 +2,6 @@
   @media (min-width: $break-point-tablet) {
     display: grid;
     grid-template-columns: 1fr 256px;
-    grid-template-rows: 56px;
     padding: 0 38px;
   }
 }
@@ -38,6 +37,10 @@
 
   &:user-invalid {
     outline: 2px solid $color-border-input-error;
+  }
+
+  @media (min-width: $break-point-tablet) {
+    height: 100%;
   }
 }
 

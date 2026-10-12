@@ -62,7 +62,6 @@
 
 .additional-product-card__detail-price {
   line-height: 14px;
-  flex-shrink: 0;
   word-break: break-all;
 
   @media (min-width: $break-point-tablet) {

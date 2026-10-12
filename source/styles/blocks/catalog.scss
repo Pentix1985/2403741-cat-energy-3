@@ -9,9 +9,9 @@
   border-bottom: 1px solid $color-border-hero;
 
   @media (min-width: $break-point-tablet) {
-    align-self: end;
     width: 100%;
     border: none;
+    margin-top: 81px;
   }
 }
 

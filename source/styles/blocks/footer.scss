@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 23px;
   }
 }
 
@@ -18,10 +19,13 @@
   text-align: center;
   padding-bottom: 20px;
   border-bottom: 1px solid $color-border-color;
+  flex-shrink: 0;
 
   @media (min-width: $break-point-tablet) {
     padding: 0;
     border: none;
+    flex: 0 0 calc((100% - 46px) / 3);
+    text-align: left;
   }
 }
 
@@ -34,10 +38,12 @@
   padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px solid $color-border-color;
+  flex-shrink: 0;
 
   @media (min-width: $break-point-tablet) {
     padding: 0;
     border: none;
+    flex: 0 0 calc((100% - 46px) / 3);
   }
 }
 
@@ -50,6 +56,7 @@
   @media (min-width: $break-point-tablet) {
     padding: 0;
     border: none;
+    flex: 0 0 calc((100% - 46px) / 3);
   }
 }
 

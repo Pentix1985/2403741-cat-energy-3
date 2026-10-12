@@ -18,5 +18,6 @@
 }
 
 .educational-provider__logo {
+  flex-shrink: 0;
   fill: $color-social;
 }
