@@ -6,6 +6,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .compare-slider__image--before {
@@ -52,7 +53,7 @@
 
 .compare-slider__ranger {
   top: 0;
-  left: 50%;
+  left: calc(50% - 2px);
   background-color: $color-social;
   border-radius: 4px;
   width: 4px;

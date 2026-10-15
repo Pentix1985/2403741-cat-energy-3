@@ -1,19 +1,28 @@
 .example {
-  background-color: $bg-secondary-color;
+  background-color: $bg-slider;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @media (min-width: $break-point-tablet) {
     padding-top: 45px;
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-    background-size: 100% 61.5%;
+    background-image:
+      linear-gradient(
+        to top,
+        $bg-slider 0 462px,
+        $bg-basic-color 462px
+      );
     background-repeat: no-repeat;
+    padding-bottom: 101px;
   }
 
   @media (min-width: $break-point-desktop) {
-    padding-top: 69px;
+    padding-top: 0;
     padding-bottom: 75px;
-    background-size: 100% 31%;
+    background-image:
+      linear-gradient(
+        $bg-basic-color 0 135px,
+        $bg-secondary-color 135px
+      );
   }
 }
 
@@ -87,6 +96,7 @@
   @media (min-width: $break-point-tablet) {
     grid-template-columns: 162px 162px;
     gap: 43px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $break-point-desktop) {
@@ -107,14 +117,18 @@
   margin: 0;
   order: -1;
   text-transform: uppercase;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
   border-radius: 3px;
-  padding: 15px 19px 18px 18px;
+  padding: 14px 18px 17px;
   text-align: center;
   justify-self: stretch;
+  max-width: 124px;
+  word-break: break-all;
 
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(37, $text-color-deafault, 30);
+    max-width: 162px;
+    padding: 15px 18px 20px;
   }
 }
 
@@ -122,15 +136,18 @@
   @include font-height-color-size(12, $text-color, 12);
   text-transform: lowercase;
   max-width: 87px;
-  background-color: $bg-secondary-color;
-  margin-top: -8px;
+  background-color: $bg-slider;
+  margin-top: -9px;
   text-align: center;
-  padding-left: 14px;
+  padding-left: 12px;
   padding-right: 14px;
 
   @media (min-width: $break-point-tablet) {
-    max-width: none;
+    @include font-height-color-size(14, $text-color, 14);
+    max-width: 142px;
     background-color: $color-basic;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   @media (min-width: $break-point-desktop) {
@@ -149,13 +166,17 @@
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(20, $text-color-deafault, 20);
     text-align: right;
-    margin: 11px 0 0;
+    margin: 11px 1px 0 0;
     max-width: 175px;
   }
 
   @media (min-width: $break-point-desktop) {
     margin-top: 0;
-    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 366px;
+    width: 100%;
+    justify-items: start;
   }
 }
 
@@ -173,7 +194,8 @@
 
   @media (min-width: $break-point-desktop) {
     padding-top: 0;
-    margin-left: 63px;
+    justify-self: center;
+    padding-left: 15px;
   }
 }
 

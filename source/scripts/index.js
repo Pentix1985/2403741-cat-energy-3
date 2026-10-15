@@ -21,6 +21,9 @@ function checkJS() {
   const header = document.querySelector('header');
   header.classList.remove('disabled-js');
 
+  const headerLogo = document.querySelector('.header__logo');
+  headerLogo.classList.remove('header__logo--disabled-js');
+
   const headerNavigation = document.querySelector('.header__navigation');
   headerNavigation.classList.remove('header__navigation--disabled-js');
 
@@ -36,7 +39,11 @@ function checkJS() {
 
 function initApp() {
   checkJS();
-  initSlider();
+
+  if (document.querySelector('.compare-slider')) {
+    initSlider();
+  }
+
 }
 
 initApp();

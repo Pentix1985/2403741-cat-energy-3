@@ -1,12 +1,18 @@
 .map {
   display: grid;
-  place-items: center;
+
+  & noscript {
+    grid-area: 1 / 1;
+    z-index: 1;
+  }
 }
 
 .map iframe {
   display: block;
   border: none;
   width: 100%;
+  grid-area: 1 / 1;
+  z-index: 2;
 
   @media (min-width: $break-point-tablet) {
     min-height: 400px;

@@ -56,12 +56,12 @@
 
   &::before {
     top: 2px;
-    box-shadow: 0 9px 0 $color-deafault;
+    box-shadow: 0 8px 0 $color-deafault;
     transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
 
   &::after {
-    bottom: 2px;
+    bottom: 4px;
     transition: bottom 0.3s 0.15s, transform 0.3s;
   }
 }

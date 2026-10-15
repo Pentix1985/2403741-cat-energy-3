@@ -22,14 +22,14 @@
   @media (min-width: $break-point-desktop) {
     grid-row: 1 / 1;
     grid-column: 2 / 3;
-    z-index: 2;
+    z-index: 3;
     background-color: $bg-basic-color;
     place-self: center start;
     padding: 60px 78px 60px 80px;
     margin: 0;
     margin-top: 95px;
     margin-bottom: 106px;
-    column-gap: 87px;
+    column-gap: 81px;
   }
 }
 
@@ -39,7 +39,6 @@
   text-transform: uppercase;
   grid-row: 1;
   grid-column: 1;
-  padding-right: 15px;
 
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(26, $text-color-subscribe, 20);
@@ -69,7 +68,7 @@
 .contacts__settlement-name {
   @media (min-width: $break-point-tablet) {
     display: block;
-    margin-top: 17px;
+    margin-top: 19px;
   }
 }
 

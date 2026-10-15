@@ -4,6 +4,7 @@
 
   @media (min-width: $break-point-tablet) {
     padding-bottom: 80px;
+    padding-top: 80px;
   }
 
   @media (min-width: $break-point-desktop) {
@@ -29,7 +30,7 @@
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(32, null, 32);
     padding-left: 0;
-    margin-bottom: 80px;
+    margin-bottom: 66px;
     grid-template-columns: 30px auto minmax(30px, 1fr);
 
     &::before {

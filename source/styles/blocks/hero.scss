@@ -28,6 +28,8 @@ $hero-bg-image-width: 320px;
     & picture {
       grid-area: imgbtn;
       z-index: 1;
+      display: flex;
+      justify-content: center;
     }
     padding-bottom: 84px;
   }
@@ -93,6 +95,8 @@ $hero-bg-image-width: 320px;
 }
 
 .hero__button {
+  margin-bottom: 20px;
+
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(26, $color-basic, 20);
     width: 244px;
@@ -100,6 +104,7 @@ $hero-bg-image-width: 320px;
     grid-area: imgbtn;
     place-self: start start;
     z-index: 2;
+    margin-bottom: 0;
     margin-top: 29px;
     margin-left: 90px;
   }
@@ -114,6 +119,13 @@ $hero-bg-image-width: 320px;
 }
 
 .hero__image {
+  display: block;
+  margin-bottom: 3px;
+
+  @media (min-width: $break-point-tablet) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $break-point-desktop) {
     margin-left: -74%;
   }
@@ -143,7 +155,6 @@ $hero-bg-image-width: 320px;
     $hero-bg-image-width auto,
     100% max(55%, $hero-bg-image-height),
     100% 55%;
-  margin-bottom: 20px;
 
   @media (min-width: $break-point-tablet) {
     background: none;
