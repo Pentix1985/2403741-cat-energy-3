@@ -23,6 +23,10 @@
   width: 24px;
   height: 24px;
   margin-right: 1px;
+
+  &--disabled-js {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -47,6 +51,28 @@
   @media (min-width: $break-point-desktop) {
     padding-top: 3px;
     background: transparent;
+  }
+
+  &--disabled-js {
+    display: flex;
+    flex-direction: column;
+    position: static;
+
+    @media (min-width: $break-point-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &--index {
+    @media (min-width: $break-point-desktop) {
+      & a {
+        @include font-height-color-size(20, $text-color-basic, 20);
+      }
+
+      & a::after {
+        background-color: $color-basic;
+      }
+    }
   }
 }
 
@@ -92,53 +118,27 @@
   @media (min-width: $break-point-desktop) {
     @include font-height-color-size(20, $text-color-deafault, 20);
   }
-}
 
-.navigation__link--active {
-  @media (min-width: $break-point-tablet) {
+  &--active {
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-      left: 0;
-      height: 2px;
-      background-color: $color-primary;
-    }
-  }
-
-  @media (min-width: $break-point-desktop) {
-    &::after {
-      background-color: $color-primary;
-      bottom: -14px;
-    }
-  }
-}
-
-.navigation__toggle--disabled-js {
-  display: none;
-}
-
-.navigation__list-disabled-js {
-  display: flex;
-  flex-direction: column;
-  position: static;
-
-  @media (min-width: $break-point-tablet) {
-    flex-direction: row;
-  }
-}
-
-.navigation__list--index {
-  @media (min-width: $break-point-desktop) {
-    & a {
-      @include font-height-color-size(20, $text-color-basic, 20);
+    @media (min-width: $break-point-tablet) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background-color: $color-primary;
+      }
     }
 
-    & a::after {
-      background-color: $color-basic;
+    @media (min-width: $break-point-desktop) {
+      &::after {
+        background-color: $color-primary;
+        bottom: -14px;
+      }
     }
   }
 }

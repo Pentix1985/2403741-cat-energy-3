@@ -35,6 +35,7 @@
     &:last-child {
       border-bottom: 1px solid $color-border-catalog;
       padding-bottom: 16px;
+      padding-top: 14px;
     }
   }
 }
@@ -65,6 +66,11 @@
     display: grid;
     grid-template-columns: 1fr minmax(auto, 93px);
   }
+
+  @media (min-width: $break-point-desktop) {
+    padding-top: 5px;
+    grid-template-columns: 1fr minmax(44px, max-content);
+  }
 }
 
 .additional-product-card__detail-price {
@@ -75,6 +81,10 @@
     @include font-height-color-size(20, $text-color-subtitle, 16);
     margin: 0;
     text-align: right;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    text-align: left;
   }
 }
 

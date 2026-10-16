@@ -7,12 +7,52 @@ $hero-bg-image-width: 320px;
   @media (min-width: $break-point-tablet) {
     border: none;
   }
+
+  &--page-index {
+    background-image:
+      linear-gradient(
+        to right,
+        $bg-primary-color
+      ),
+      image-set(
+        url("../../images/mobile/background/hero_index_background_mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/mobile/background/hero_index_background_mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/mobile/background/hero_index_background_mobile@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/mobile/background/hero_index_background_mobile@2x.jpg") type("image/jpeg") 2x
+      ),
+      linear-gradient(
+        to right,
+        rgb(81, 81, 81, 1) 46%,
+        rgb(65, 65, 65, 1) 54%
+      ),
+      linear-gradient(
+        to right,
+        $bg-basic-color
+      );
+    background-repeat: no-repeat;
+    background-position: center top, center top, center top, bottom;
+    background-size:
+      100% max(55%, $hero-bg-image-height),
+      $hero-bg-image-width auto,
+      100% max(55%, $hero-bg-image-height),
+      100% 55%;
+    border-bottom: none;
+
+    @media (min-width: $break-point-tablet) {
+      background: none;
+    }
+
+    @media (min-width: $break-point-desktop) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .hero__container {
   text-align: center;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 41px;
+  border-top: 1px solid $color-border-color;
 
   @media (min-width: $break-point-tablet) {
     display: grid;
@@ -21,30 +61,43 @@ $hero-bg-image-width: 320px;
       "heading"
       "text"
       "imgbtn";
-
     position: relative;
     padding-top: 65px;
-
-    & picture {
-      grid-area: imgbtn;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-    }
     padding-bottom: 84px;
+    border-top: none;
   }
 
   @media (min-width: $break-point-desktop) {
-    padding-top: 29px;
-    padding-bottom: 52px;
+    padding-top: 74px;
+    padding-bottom: 84px;
     grid-template-areas: none;
     grid-template-columns: 1fr 1fr;
+  }
 
-    & picture {
-      grid-column: 2 / 3;
-      grid-row: 1 / -1;
-      z-index: 0;
+  &--index {
+    padding-bottom: 0;
+    border-top: none;
+
+    @media (min-width: $break-point-desktop) {
+      padding-bottom: 52px;
+      padding-left: 190px;
+      padding-top: 29px;
     }
+  }
+}
+
+.hero__picture {
+  @media (min-width: $break-point-tablet) {
+    grid-area: imgbtn;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    z-index: 0;
   }
 }
 
@@ -60,8 +113,24 @@ $hero-bg-image-width: 320px;
   @media (min-width: $break-point-desktop) {
     grid-area: auto;
     grid-column: 1 / 2;
-    margin-top: 81px;
     margin-left: 0;
+  }
+
+  &--index {
+    text-align: center;
+    color: $color-basic;
+
+    @media (min-width: $break-point-tablet) {
+      color: $text-color-deafault;
+      text-align: left;
+      margin-left: 90px;
+      max-width: 416px;
+    }
+
+    @media (min-width: $break-point-desktop) {
+      margin-left: 0;
+      margin-top: 81px;
+    }
   }
 }
 
@@ -128,66 +197,5 @@ $hero-bg-image-width: 320px;
 
   @media (min-width: $break-point-desktop) {
     margin-left: -74%;
-  }
-}
-
-
-.hero--page-index {
-  background-image:
-    linear-gradient(
-      to right,
-      $bg-primary-color
-    ),
-    url("../../images/mobile/background/hero_index_background_mobile@2x.jpg"),
-    linear-gradient(
-      to right,
-      rgb(81, 81, 81, 1) 46%,
-      rgb(65, 65, 65, 1) 54%
-    ),
-    linear-gradient(
-      to right,
-      $bg-basic-color
-    );
-  background-repeat: no-repeat;
-  background-position: center top, center top, center top, bottom;
-  background-size:
-    100% max(55%, $hero-bg-image-height),
-    $hero-bg-image-width auto,
-    100% max(55%, $hero-bg-image-height),
-    100% 55%;
-
-  @media (min-width: $break-point-tablet) {
-    background: none;
-  }
-
-  @media (min-width: $break-point-desktop) {
-    margin-bottom: 0;
-  }
-
-  border-bottom: none;
-}
-
-.hero__container--index {
-  padding-bottom: 0;
-
-  @media (min-width: $break-point-desktop) {
-    padding-bottom: 52px;
-    padding-left: 190px;
-  }
-}
-
-.hero__title--index {
-  text-align: center;
-  color: $color-basic;
-
-  @media (min-width: $break-point-tablet) {
-    color: $text-color-deafault;
-    text-align: left;
-    margin-left: 90px;
-    max-width: 416px;
-  }
-
-  @media (min-width: $break-point-desktop) {
-    margin-left: 0;
   }
 }

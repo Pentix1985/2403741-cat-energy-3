@@ -1,3 +1,9 @@
+.header {
+  &--index {
+    border: none;
+  }
+}
+
 .header__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -17,6 +23,10 @@
     column-gap: 14px;
     padding-top: 55px;
   }
+
+  &--disabled-js {
+    padding-bottom: 0;
+  }
 }
 
 .header__trademark {
@@ -30,6 +40,13 @@
 
   @media (min-width: $break-point-tablet) {
     margin-right: auto;
+    align-self: start;
+    margin-top: 16px;
+  }
+
+  &--disabled-js {
+    align-self: start;
+    margin-top: 16px;
   }
 }
 
@@ -49,30 +66,19 @@
     margin-left: 135px;
     margin-right: 0;
   }
-}
 
-.header__container-disabled-js {
-  padding-bottom: 0;
-}
+  &--disabled-js {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
 
-.header__navigation--disabled-js {
-  display: flex;
-  flex-direction: column;
-  grid-column: 1 / -1;
-
-  @media (min-width: $break-point-tablet) {
-    grid-column: 3 / 4;
-    margin-left: 0;
-    margin-right: 4px;
-    justify-self: end;
+    @media (min-width: $break-point-tablet) {
+      &--disabled-js {
+        grid-column: 3 / 4;
+        margin-left: 0;
+        margin-right: 4px;
+        justify-self: end;
+      }
+    }
   }
-}
-
-.header--index {
-  border: none;
-}
-
-.header__logo--disabled-js {
-  align-self: start;
-  margin-top: 16px;
 }

@@ -7,14 +7,19 @@
   width: 100%;
   height: 100%;
   display: block;
+
+  &--before {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  &--after {
+    clip-path: inset(0 0 0 50%);
+  }
 }
 
-.compare-slider__image--before {
-  clip-path: inset(0 50% 0 0);
-}
-
-.compare-slider__image--after {
-  clip-path: inset(0 0 0 50%);
+.compare-slider__picture {
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .compare-slider__mixer {

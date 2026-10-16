@@ -51,6 +51,11 @@
     margin-top: 110px;
     margin-bottom: 23px;
   }
+
+  @media (min-width: $break-point-desktop) {
+    margin-top: 100px;
+    margin-bottom: 25px;
+  }
 }
 
 .show-more__description {

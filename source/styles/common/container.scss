@@ -1,3 +1,9 @@
 .container {
-  @include container($container-mobile, $container-tablet, $container-desktop, $break-point-tablet, $break-point-desktop);
+  @include container(
+    $container-mobile,
+    $container-tablet,
+    $container-desktop,
+    $break-point-tablet,
+    $break-point-desktop
+  );
 }

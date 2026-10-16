@@ -32,16 +32,16 @@
     color: $color-primary;
     opacity: 30%;
   }
-}
 
-.social-list__link--vk::before {
-  mask-image: url("../../icons/stack.svg#vkontakte");
-}
+  &--vk::before {
+    mask-image: url("../../icons/stack.svg#vkontakte");
+  }
 
-.social-list__link--youtube::before {
-  mask-image: url("../../icons/stack.svg#youtube");
-}
+  &--youtube::before {
+    mask-image: url("../../icons/stack.svg#youtube");
+  }
 
-.social-list__link--telegramm::before {
-  mask-image: url("../../icons/stack.svg#telegram");
+  &--telegramm::before {
+    mask-image: url("../../icons/stack.svg#telegram");
+  }
 }

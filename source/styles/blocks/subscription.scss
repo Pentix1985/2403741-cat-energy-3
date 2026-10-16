@@ -40,9 +40,11 @@
   }
 
   @media (min-width: $break-point-desktop) {
+    @include font-height-color-size(40, null, 40);
     grid-template-rows: auto;
     grid-template-columns: minmax(70px, calc(50vw - 610px)) fit-content(1220px) minmax(70px, 1fr);
     gap: 0;
+    margin-bottom: 72px;
 
     &::before {
       margin-right: 40px;

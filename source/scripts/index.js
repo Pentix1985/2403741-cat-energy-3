@@ -31,10 +31,10 @@ function checkJS() {
   navigation.classList.remove('navigation__toggle--disabled-js');
 
   const headerContainer = document.querySelector('.header__container');
-  headerContainer.classList.remove('header__container-disabled-js');
+  headerContainer.classList.remove('header__container--disabled-js');
 
   const navigationList = document.querySelector('.navigation__list');
-  navigationList.classList.remove('navigation__list-disabled-js');
+  navigationList.classList.remove('navigation__list--disabled-js');
 }
 
 function initApp() {

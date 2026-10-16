@@ -15,17 +15,18 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-}
 
-.button--secondary {
-  color: $text-color;
-  background-color: $bg-secondary-color;
+  &--secondary {
+    color: $text-color;
+    background-color: $bg-secondary-color;
 
-  &:hover {
-    background-color: $color-button-secondary-hover;
-  }
+    &:hover {
+      background-color: $color-button-secondary-hover;
+    }
 
-  &:active {
-    background-color: $color-button-secondary-active;
+    &:active {
+      background-color: $color-button-secondary-active;
+      color: $text-color;
+    }
   }
 }

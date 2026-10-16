@@ -1,13 +1,23 @@
 .map {
   display: grid;
+}
 
-  & noscript {
-    grid-area: 1 / 1;
-    z-index: 1;
+.map__noscript {
+  grid-area: 1 / 1;
+  z-index: 1;
+}
+
+.map__image {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $break-point-desktop) {
+    height: 100%;
+    object-fit: cover;
   }
 }
 
-.map iframe {
+.map__iframe {
   display: block;
   border: none;
   width: 100%;
@@ -16,5 +26,9 @@
 
   @media (min-width: $break-point-tablet) {
     min-height: 400px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    height: 100%;
   }
 }

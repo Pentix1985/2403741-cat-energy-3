@@ -5,12 +5,7 @@
 
   @media (min-width: $break-point-tablet) {
     padding-top: 45px;
-    background-image:
-      linear-gradient(
-        to top,
-        $bg-slider 0 462px,
-        $bg-basic-color 462px
-      );
+    background-image: linear-gradient(to top, $bg-slider 0 462px, $bg-basic-color 462px);
     background-repeat: no-repeat;
     padding-bottom: 101px;
   }
@@ -18,11 +13,7 @@
   @media (min-width: $break-point-desktop) {
     padding-top: 0;
     padding-bottom: 75px;
-    background-image:
-      linear-gradient(
-        $bg-basic-color 0 135px,
-        $bg-secondary-color 135px
-      );
+    background-image: linear-gradient($bg-basic-color 0 135px, $bg-secondary-color 135px);
   }
 }
 
@@ -206,11 +197,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   margin: 0 auto;
-
-  & picture {
-    grid-row: 1;
-    grid-column: 1;
-  }
 
   @media (min-width: $break-point-tablet) {
     width: 560px;

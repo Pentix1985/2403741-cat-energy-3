@@ -16,7 +16,7 @@
 <body class="page__body page__body--index">
   <!-- Header -->
   <header class="page__header header header--index disabled-js">
-    <div class="header__container container header__container-disabled-js">
+    <div class="header__container container header__container--disabled-js">
       <a class="header__trademark trademark" href="index.html">
         <picture>
           <source type="image/svg+xml" width="70" height="59" media="(min-width: 1440px)" srcset="images/logo_trademark_desktop.svg">
@@ -41,7 +41,7 @@
             </span>
           </label>
         </div>
-        <ul class="navigation__list navigation__list--index navigation__list-disabled-js">
+        <ul class="navigation__list navigation__list--index navigation__list--disabled-js">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--active" href="index.html" aria-current="page">
               Главная
@@ -72,9 +72,14 @@
         <p class="hero__text">
           Занялся собой? Займись котом!
         </p>
-        <picture>
+        <picture class="hero__picture">
+          <source type="image/webp" width="552" height="499" media="(min-width: 1440px)" srcset="images/desktop/hero/hero_index_desktop@1x.webp 1x, images/desktop/hero/hero_index_desktop@2x.webp 2x">
           <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/desktop/hero/hero_index_desktop@2x.png 1x, images/desktop/hero/hero_index_desktop@2x.png 2x">
+
+          <source type="image/webp" width="709" height="609" media="(min-width: 768px)" srcset="images/tablet/hero/hero_index_tablet@1x.webp 1x, images/tablet/hero/hero_index_tablet@2x.webp 2x">
           <source type="image/jpeg" width="709" height="609" media="(min-width: 768px)" srcset="images/tablet/hero/hero_index_tablet@1x.jpg 1x, images/tablet/hero/hero_index_tablet@2x.jpg 2x">
+
+          <source type="image/webp" width="280" height="270" srcset="images/mobile/hero/hero_index_mobile@1x.webp 1x, images/mobile/hero/hero_index_mobile@2x.webp 2x">
           <img class="hero__image" src="images/mobile/hero/hero_index_mobile@1x.png" srcset="images/mobile/hero/hero_index_mobile@2x.png 2x" alt="Банка с кормом Cat Energy pro со вкусом курицы" width="280" height="270">
         </picture>
         <a class="hero__button button" href="#">
@@ -179,13 +184,19 @@
         </div>
         <div class="example__compare-slider compare-slider">
 
-          <picture>
+          <picture class="compare-slider__picture">
+            <source type="image/webp" width="560" height="512" media="(min-width: 768px)" srcset="images/slider/fat_cat_tablet@1x.webp 1x, images/slider/fat_cat_tablet@2x.webp 2x">
             <source type="image/png" width="560" height="512" media="(min-width: 768px)" srcset="images/slider/fat_cat_tablet@1x.png 1x, images/slider/fat_cat_tablet@2x.png 2x">
+
+            <source type="image/webp" width="280" height="256" srcset="images/slider/fat_cat_mobile@1x.webp 1x, images/slider/fat_cat_mobile@2x.webp 2x">
             <img class="compare-slider__image compare-slider__image--before" src="images/slider/fat_cat_mobile@1x.png" srcset="images/slider/fat_cat_mobile@2x.png 2x" alt="Изображение до" width="280" height="256">
           </picture>
 
-          <picture>
+          <picture class="compare-slider__picture">
+            <source type="image/webp" width="560" height="512" media="(min-width: 769px)" srcset="images/slider/slim_cat_tablet@1x.webp 1x, images/slider/slim_cat_tablet@2x.webp 2x">
             <source type="image/png" width="560" height="512" media="(min-width: 769px)" srcset="images/slider/slim_cat_tablet@1x.png 1x, images/slider/slim_cat_tablet@2x.png 2x">
+
+            <source type="image/webp" width="280" height="256" srcset="images/slider/slim_cat_mobile@1x.webp 1x, images/slider/slim_cat_mobile@2x.webp 2x">
             <img class="compare-slider__image compare-slider__image--after" src="images/slider/slim_cat_mobile@1x.png" srcset="images/slider/slim_cat_mobile@2x.png 2x" alt="Изображение после" width="280" height="256">
           </picture>
 
@@ -213,14 +224,19 @@
       </header>
 
       <div class="contacts__map map">
-        <noscript>
+        <noscript class="map__noscript">
           <picture>
+            <source type="image/webp" width="1440" height="400" media="(min-width: 1440px)" srcset="images/desktop/map/map_desktop@1x.webp 1x, images/desktop/map/map_desktop@2x.webp 2x">
             <source type="image/jpeg" width="1440" height="400" media="(min-width: 1440px)" srcset="images/desktop/map/map_desktop@1x.jpg 1x, images/desktop/map/map_desktop@2x.jpg 2x">
+
+            <source type="image/webp" width="768" height="400" media="(min-width: 768px)" srcset="images/tablet/map/map_tablet@1x.webp 1x, images/tablet/map/map_tablet@2x.webp 2x">
             <source type="image/jpeg" width="768" height="400" media="(min-width: 768px)" srcset="images/tablet/map/map_tablet@1x.jpg 1x, images/tablet/map/map_tablet@2x.jpg 2x">
-            <img src="images/mobile/map/map_mobile@1x.jpg" alt="Расположение магазина Cat energy на карте" srcset="images/mobile/map/map_mobile@2x.jpg 2x" width="320" height="362">
+
+            <source type="image/webp" width="320" height="362" srcset="images/mobile/map/map_mobile@1x.webp 1x, images/mobile/map/map_mobile@2x.webp 2x">
+            <img class="map__image" src="images/mobile/map/map_mobile@1x.jpg" alt="Расположение магазина Cat energy на карте" srcset="images/mobile/map/map_mobile@2x.jpg 2x" width="320" height="362">
           </picture>
         </noscript>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428319026!2d30.32050837726541!3d59.93879686208737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1791737168229!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Расположение офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428319026!2d30.32050837726541!3d59.93879686208737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1791737168229!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Расположение офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
       </div>
     </section>
   </main>

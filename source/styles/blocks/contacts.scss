@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: 1fr 1220px 1fr;
   }
+
+  &--first-page {
+    background-color: $color-basic;
+  }
 }
 
 .contacts__header {
@@ -73,26 +77,8 @@
 }
 
 .contacts__map {
-  & img {
-    display: block;
-    width: 100%;
-  }
-
   @media (min-width: $break-point-desktop) {
     grid-row: 1 / 1;
     grid-column: 1 / -1;
-
-    & img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    & iframe {
-      height: 100%;
-    }
   }
-}
-
-.contacts--first-page {
-  background-color: $color-basic;
 }
