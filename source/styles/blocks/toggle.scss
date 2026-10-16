@@ -1,6 +1,11 @@
 .toggle {
-  width: 24px;
-  height: 24px;
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 
   @media (min-width: $break-point-tablet) {
     display: none;
@@ -9,7 +14,6 @@
 
 .toggle__checkbox {
   position: absolute;
-  visibility: hidden;
 
   &:checked + .toggle__label::before {
     top: 11px;
@@ -22,6 +26,11 @@
     bottom: 11px;
     transform: rotate(-45deg);
     transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+
+  &:focus-visible + .toggle__label {
+    outline: auto; /* Или цвет вашего бренда */
+    outline-offset: 2px;
   }
 }
 
@@ -37,7 +46,6 @@
   &::before,
   &::after {
     content: "";
-    left: 0;
     position: absolute;
     display: block;
     width: 24px;
@@ -48,12 +56,12 @@
 
   &::before {
     top: 2px;
-    box-shadow: 0 9px 0 $color-deafault;
+    box-shadow: 0 8px 0 $color-deafault;
     transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
 
   &::after {
-    bottom: 2px;
+    bottom: 4px;
     transition: bottom 0.3s 0.15s, transform 0.3s;
   }
 }
