@@ -87,11 +87,12 @@ $hero-bg-image-width: 320px;
 }
 
 .hero__picture {
+  display: flex;
+  justify-content: center;
+
   @media (min-width: $break-point-tablet) {
     grid-area: imgbtn;
     z-index: 1;
-    display: flex;
-    justify-content: center;
   }
 
   @media (min-width: $break-point-desktop) {
