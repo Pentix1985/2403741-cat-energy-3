@@ -5,11 +5,28 @@
   color: $text-color-basic;
   text-transform: uppercase;
   background-color: $color-primary;
-  padding: 0;
+  padding: 10px 20px;
   display: block;
-}
 
-.button--secondary {
-  color: $text-color;
-  background-color: $bg-secondary-color;
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--secondary {
+    color: $text-color;
+    background-color: $bg-secondary-color;
+
+    &:hover {
+      background-color: $color-button-secondary-hover;
+    }
+
+    &:active {
+      background-color: $color-button-secondary-active;
+      color: $text-color;
+    }
+  }
 }

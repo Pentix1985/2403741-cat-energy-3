@@ -1,39 +1,137 @@
 $hero-bg-image-height: 302px;
 $hero-bg-image-width: 320px;
 
+.hero {
+  border-bottom: 1px solid $color-border-hero;
+
+  @media (min-width: $break-point-tablet) {
+    border: none;
+  }
+
+  &--page-index {
+    background-image:
+      linear-gradient(
+        to right,
+        $bg-primary-color
+      ),
+      image-set(
+        url("../../images/mobile/background/hero_index_background_mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/mobile/background/hero_index_background_mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/mobile/background/hero_index_background_mobile@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/mobile/background/hero_index_background_mobile@2x.jpg") type("image/jpeg") 2x
+      ),
+      linear-gradient(
+        to right,
+        rgb(81, 81, 81, 1) 46%,
+        rgb(65, 65, 65, 1) 54%
+      ),
+      linear-gradient(
+        to right,
+        $bg-basic-color
+      );
+    background-repeat: no-repeat;
+    background-position: center top, center top, center top, bottom;
+    background-size:
+      100% max(55%, $hero-bg-image-height),
+      $hero-bg-image-width auto,
+      100% max(55%, $hero-bg-image-height),
+      100% 55%;
+    border-bottom: none;
+
+    @media (min-width: $break-point-tablet) {
+      background: none;
+    }
+
+    @media (min-width: $break-point-desktop) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .hero__container {
   text-align: center;
-  padding-top: 27px;
+  padding-top: 26px;
+  padding-bottom: 41px;
+  border-top: 1px solid $color-border-color;
 
   @media (min-width: $break-point-tablet) {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       "heading"
       "text"
       "imgbtn";
-
     position: relative;
     padding-top: 65px;
-
-    & picture {
-      grid-area: imgbtn;
-      z-index: 1;
-    }
+    padding-bottom: 84px;
+    border-top: none;
   }
 
+  @media (min-width: $break-point-desktop) {
+    padding-top: 74px;
+    padding-bottom: 84px;
+    grid-template-areas: none;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &--index {
+    padding-bottom: 0;
+    border-top: none;
+
+    @media (min-width: $break-point-desktop) {
+      padding-bottom: 52px;
+      padding-left: 190px;
+      padding-top: 29px;
+    }
+  }
+}
+
+.hero__picture {
+  display: flex;
+  justify-content: center;
+
   @media (min-width: $break-point-tablet) {
-    padding-top: 114px;
+    grid-area: imgbtn;
+    z-index: 1;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    z-index: 0;
   }
 }
 
 .hero__title {
+  margin: 0;
+  text-align: left;
+
   @media (min-width: $break-point-tablet) {
-    @include font-height-color-size(60, $text-color-deafault, 60);
-    max-width: 416px;
     text-align: left;
     grid-area: heading;
-    margin-left: 90px;
+  }
+
+  @media (min-width: $break-point-desktop) {
+    grid-area: auto;
+    grid-column: 1 / 2;
+    margin-left: 0;
+  }
+
+  &--index {
+    text-align: center;
+    color: $color-basic;
+
+    @media (min-width: $break-point-tablet) {
+      color: $text-color-deafault;
+      text-align: left;
+      margin-left: 90px;
+      max-width: 416px;
+    }
+
+    @media (min-width: $break-point-desktop) {
+      margin-left: 0;
+      margin-top: 81px;
+    }
   }
 }
 
@@ -56,17 +154,18 @@ $hero-bg-image-width: 320px;
     grid-area: text;
     margin-left: 90px;
   }
-}
 
-.hero__image {
-  @media (min-width: $break-point-tablet) {
-    grid-area: imgbtn;
+  @media (min-width: $break-point-desktop) {
+    grid-area: auto;
+    grid-column: 1 / 2;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-bottom: 52px;
   }
 }
 
 .hero__button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(26, $color-basic, 20);
@@ -75,84 +174,29 @@ $hero-bg-image-width: 320px;
     grid-area: imgbtn;
     place-self: start start;
     z-index: 2;
+    margin-bottom: 0;
     margin-top: 29px;
     margin-left: 90px;
   }
+
+  @media (min-width: $break-point-desktop) {
+    grid-area: auto;
+    grid-column: 1 / 2;
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 414px;
+  }
 }
 
-
-.hero--page-index {
-  background-image:
-    linear-gradient(
-      to right,
-      $bg-primary-color
-    ),
-    url("../../images/mobile/background/hero_index_background_mobile@2x.jpg"),
-    linear-gradient(
-      to right,
-      rgb(81, 81, 81, 1) 46%,
-      rgb(65, 65, 65, 1) 54%
-    ),
-    linear-gradient(
-      to right,
-      $bg-basic-color
-    );
-  background-repeat: no-repeat;
-  background-position: center top, center top, center top, bottom;
-  background-size:
-    100% max(calc(100% - 138px), $hero-bg-image-height),
-    $hero-bg-image-width auto,
-    100% max(calc(100% - 138px), $hero-bg-image-height),
-    100% 138px;
+.hero__image {
+  display: block;
+  margin-bottom: 3px;
 
   @media (min-width: $break-point-tablet) {
-    background: none;
+    margin-bottom: 0;
   }
 
   @media (min-width: $break-point-desktop) {
-    background-image:
-      linear-gradient(
-        to right,
-        $bg-primary-color
-      ),
-      url("../../images/desktop/background/hero_index_background_desktop@2x.jpg"),
-      linear-gradient(
-        to right,
-        rgb(81, 81, 81, 1) 45%,
-        rgb(65, 65, 65, 1) 60%
-      );
-    // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
-    background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
-    // 1041px ширина изображения в макете, но не ширина самой картинки
-    background-size: 50%, 1041px 694px, 50%;
-    background-repeat: no-repeat;
+    margin-left: -74%;
   }
-  // @media (min-width: $break-point-desktop) {
-  //   &::before {
-  //     content: "";
-  //     width: 50%;
-  //     height: 100%;
-  //     display: block;
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     background-image:
-  //       linear-gradient(
-  //         to right,
-  //         $bg-primary-color
-  //       ),
-  //       url("../../images/desktop/background/hero_index_background_desktop@2x.jpg"),
-  //       linear-gradient(
-  //         to right,
-  //         rgb(81, 81, 81, 1) 45%,
-  //         rgb(65, 65, 65, 1) 60%
-  //       );
-  //     // 321px это разница между 1041px (шириной картинки) и 720px(видимая область)
-  //     background-position: right, max(min(calc(50% + 720px), calc(100% + 321px)), 100%) 100%, right;
-  //     // 1041px ширина изображения в макете, но не ширина самой картинки
-  //     background-size: 100%, 1041px 694px, 100%;
-  //     background-repeat: no-repeat;
-  //     z-index: -1;
-  //   }
-  // }
 }

@@ -10,6 +10,23 @@
       display: flex;
     }
   }
+
+  @media (min-width: $break-point-desktop) {
+    display: flex;
+    max-width: 590px;
+  }
+}
+
+.navigation__toggle {
+  grid-column: 3 / 4;
+  place-self: center end;
+  width: 24px;
+  height: 24px;
+  margin-right: 1px;
+
+  &--disabled-js {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -25,13 +42,37 @@
 
   @media (min-width: $break-point-tablet) {
     display: flex;
-    gap: 33px;
+    gap: 34px;
     flex-wrap: wrap;
     position: static;
+    justify-content: flex-end;
   }
 
   @media (min-width: $break-point-desktop) {
+    padding-top: 3px;
     background: transparent;
+  }
+
+  &--disabled-js {
+    display: flex;
+    flex-direction: column;
+    position: static;
+
+    @media (min-width: $break-point-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &--index {
+    @media (min-width: $break-point-desktop) {
+      & a {
+        @include font-height-color-size(20, $text-color-basic, 20);
+      }
+
+      & a::after {
+        background-color: $color-basic;
+      }
+    }
   }
 }
 
@@ -59,26 +100,45 @@
   color: $text-color-deafault;
   display: block;
   text-align: center;
-  padding: 22px 0 24px;
+  padding: 22px 20px 24px;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $break-point-tablet) {
     @include font-height-color-size(24, $text-color-deafault, 18);
     padding: 0;
   }
-}
 
-.navigation__link--active {
-  @media (min-width: $break-point-tablet) {
+  @media (min-width: $break-point-desktop) {
+    @include font-height-color-size(20, $text-color-deafault, 20);
+  }
+
+  &--active {
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-      left: 0;
-      height: 2px;
-      background-color: $color-primary;
+    @media (min-width: $break-point-tablet) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background-color: $color-primary;
+      }
+    }
+
+    @media (min-width: $break-point-desktop) {
+      &::after {
+        background-color: $color-primary;
+        bottom: -14px;
+      }
     }
   }
 }

@@ -3,4 +3,8 @@
   font-weight: 400;
   font-family: $secondary-font;
   margin: 0;
+
+  @media (min-width: $break-point-tablet) {
+    @include font-height-color-size(36, $text-color-deafault, 36);
+  }
 }
