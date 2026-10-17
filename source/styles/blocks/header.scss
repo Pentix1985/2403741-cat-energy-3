@@ -73,7 +73,7 @@
     grid-column: 1 / -1;
 
     @media (min-width: $break-point-tablet) {
-      &--disabled-js {
+      & {
         grid-column: 3 / 4;
         margin-left: 0;
         margin-right: 4px;
