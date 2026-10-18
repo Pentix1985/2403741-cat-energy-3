@@ -3,6 +3,9 @@
   text-decoration: none;
   display: flex;
   gap: 24px;
+  padding-top: 20px;
+  justify-content: space-between;
+  align-items: center;
 
   &:hover .educational-provider__logo {
     fill: $color-primary;
@@ -24,6 +27,9 @@
   @media (min-width: $break-point-tablet) {
     justify-content: end;
     gap: 22px;
+    padding: 0;
+    border: none;
+    flex: 0 0 calc((100% - 46px) / 3);
   }
 }
 
